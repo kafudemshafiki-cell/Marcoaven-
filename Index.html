@@ -1,0 +1,4963 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#080b16"
+    >
+
+    <meta
+        name="description"
+        content="Meet Nexodra — the smarter way to manage your online store, point of sale, inventory, orders, and business analytics from one powerful platform."
+    >
+
+    <meta
+        name="keywords"
+        content="Nexodra, inventory management, POS software, online store, business management, sales analytics, stock management"
+    >
+
+    <meta name="author" content="Nexodra">
+
+    <title>Nexodra — Run Your Business Without Limits</title>
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="Style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+</head>
+
+<body>
+
+    <!-- =========================================
+         SVG ICON LIBRARY
+         Reusable icons throughout the website
+    ========================================== -->
+
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="svg-library"
+        aria-hidden="true"
+        style="position:absolute;width:0;height:0;overflow:hidden"
+    >
+
+        <symbol id="icon-arrow-right" viewBox="0 0 24 24">
+            <path
+                d="M5 12h14M12 5l7 7-7 7"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+        </symbol>
+
+        <symbol id="icon-arrow-up-right" viewBox="0 0 24 24">
+            <path
+                d="M7 17 17 7M7 7h10v10"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+        </symbol>
+
+        <symbol id="icon-chevron-down" viewBox="0 0 24 24">
+            <path
+                d="m6 9 6 6 6-6"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+        </symbol>
+
+        <symbol id="icon-check" viewBox="0 0 24 24">
+            <path
+                d="m5 12 4 4L19 6"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+        </symbol>
+
+        <symbol id="icon-menu" viewBox="0 0 24 24">
+            <path
+                d="M4 7h16M4 12h16M4 17h16"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+            />
+        </symbol>
+
+        <symbol id="icon-close" viewBox="0 0 24 24">
+            <path
+                d="m6 6 12 12M18 6 6 18"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+            />
+        </symbol>
+
+        <symbol id="icon-sparkles" viewBox="0 0 24 24">
+            <path
+                d="m12 3 1.9 5.8L20 11l-6.1 2.2L12 19l-1.9-5.8L4 11l6.1-2.2L12 3Z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linejoin="round"
+            />
+            <path
+                d="m19 14 1.1 2.1L22 17l-1.9.9L19 20l-.9-2.1L16 17l2.1-.9L19 14Z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.4"
+                stroke-linejoin="round"
+            />
+        </symbol>
+
+        <symbol id="icon-grid" viewBox="0 0 24 24">
+            <rect
+                x="3"
+                y="3"
+                width="7"
+                height="7"
+                rx="2"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+            />
+            <rect
+                x="14"
+                y="3"
+                width="7"
+                height="7"
+                rx="2"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+            />
+            <rect
+                x="3"
+                y="14"
+                width="7"
+                height="7"
+                rx="2"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+            />
+            <rect
+                x="14"
+                y="14"
+                width="7"
+                height="7"
+                rx="2"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+            />
+        </symbol>
+
+        <symbol id="icon-package" viewBox="0 0 24 24">
+            <path
+                d="m12 3 9 5-9 5-9-5 9-5Z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linejoin="round"
+            />
+            <path
+                d="M3 8v9l9 5 9-5V8M12 13v9M7.5 5.5l9 5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linejoin="round"
+            />
+        </symbol>
+
+        <symbol id="icon-shopping-bag" viewBox="0 0 24 24">
+            <path
+                d="M5 8h14l1 13H4L5 8Z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linejoin="round"
+            />
+            <path
+                d="M9 9V6a3 3 0 0 1 6 0v3"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+            />
+        </symbol>
+
+        <symbol id="icon-chart" viewBox="0 0 24 24">
+            <path
+                d="M3 3v18h18"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+            />
+            <path
+                d="m7 14 4-4 4 3 6-7"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+        </symbol>
+
+        <symbol id="icon-users" viewBox="0 0 24 24">
+            <path
+                d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+            />
+            <circle
+                cx="10"
+                cy="7"
+                r="4"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+            />
+            <path
+                d="M20 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+            />
+        </symbol>
+
+        <symbol id="icon-credit-card" viewBox="0 0 24 24">
+            <rect
+                x="2"
+                y="5"
+                width="20"
+                height="14"
+                rx="3"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+            />
+            <path
+                d="M2 10h20M6 15h4"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+            />
+        </symbol>
+
+        <symbol id="icon-clock" viewBox="0 0 24 24">
+            <circle
+                cx="12"
+                cy="12"
+                r="9"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+            />
+            <path
+                d="M12 7v5l3 2"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+            />
+        </symbol>
+
+        <symbol id="icon-shield" viewBox="0 0 24 24">
+            <path
+                d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11Z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linejoin="round"
+            />
+            <path
+                d="m9 12 2 2 4-4"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+        </symbol>
+
+        <symbol id="icon-globe" viewBox="0 0 24 24">
+            <circle
+                cx="12"
+                cy="12"
+                r="9"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+            />
+            <path
+                d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+            />
+        </symbol>
+
+        <symbol id="icon-bolt" viewBox="0 0 24 24">
+            <path
+                d="m13 2-3 9h7L9 22l2-9H4l9-11Z"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linejoin="round"
+            />
+        </symbol>
+
+        <symbol id="icon-bell" viewBox="0 0 24 24">
+            <path
+                d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+        </symbol>
+
+        <symbol id="icon-search" viewBox="0 0 24 24">
+            <circle
+                cx="11"
+                cy="11"
+                r="7"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+            />
+            <path
+                d="m16 16 5 5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.7"
+                stroke-linecap="round"
+            />
+        </symbol>
+
+        <symbol id="icon-plus" viewBox="0 0 24 24">
+            <path
+                d="M12 5v14M5 12h14"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+            />
+        </symbol>
+
+        <symbol id="icon-trending-up" viewBox="0 0 24 24">
+            <path
+                d="m3 17 6-6 4 4 8-9M15 6h6v6"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            />
+        </symbol>
+
+        <symbol id="icon-menu-dots" viewBox="0 0 24 24">
+            <circle cx="5" cy="12" r="1.5" fill="currentColor"/>
+            <circle cx="12" cy="12" r="1.5" fill="currentColor"/>
+            <circle cx="19" cy="12" r="1.5" fill="currentColor"/>
+        </symbol>
+
+    </svg>
+
+
+    <!-- =========================================
+         ANNOUNCEMENT BAR
+    ========================================== -->
+
+    <div class="announcement-bar">
+
+        <div class="announcement-content">
+
+            <span class="announcement-badge">
+                NEW
+            </span>
+
+            <p>
+                One platform. Your entire business.
+                <a href="#features">
+                    Discover Nexodra
+                    <svg class="icon icon-small">
+                        <use href="#icon-arrow-right"></use>
+                    </svg>
+                </a>
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         HEADER / NAVIGATION
+    ========================================== -->
+
+    <header class="site-header" id="top">
+
+        <div class="container header-container">
+
+            <a
+                href="#top"
+                class="brand"
+                aria-label="Nexodra home"
+            >
+
+                <span class="brand-mark">
+
+                    <span class="brand-mark-shape"></span>
+
+                    <span class="brand-mark-core"></span>
+
+                </span>
+
+                <span class="brand-name">
+                    nexodra<span class="brand-period">.</span>
+                </span>
+
+            </a>
+
+
+            <button
+                class="mobile-menu-toggle"
+                id="mobileMenuToggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="mainNavigation"
+            >
+
+                <svg class="icon menu-open-icon">
+                    <use href="#icon-menu"></use>
+                </svg>
+
+                <svg class="icon menu-close-icon">
+                    <use href="#icon-close"></use>
+                </svg>
+
+            </button>
+
+
+            <nav
+                class="main-navigation"
+                id="mainNavigation"
+                aria-label="Main navigation"
+            >
+
+                <div class="nav-links">
+
+                    <a href="#features" class="nav-link">
+                        Features
+                    </a>
+
+                    <a href="#platform" class="nav-link">
+                        Platform
+                    </a>
+
+                    <a href="#solutions" class="nav-link">
+                        Solutions
+                    </a>
+
+                    <a href="#insights" class="nav-link">
+                        Insights
+                    </a>
+
+                    <a href="#pricing" class="nav-link">
+                        Pricing
+                    </a>
+
+                </div>
+
+
+                <div class="nav-actions">
+
+                    <a
+                        href="#contact"
+                        class="nav-login"
+                    >
+                        Contact us
+                    </a>
+
+                    <a
+                        href="#get-started"
+                        class="button button-primary button-nav"
+                    >
+                        Get started
+
+                        <svg class="icon icon-small">
+                            <use href="#icon-arrow-up-right"></use>
+                        </svg>
+
+                    </a>
+
+                </div>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+
+        <!-- =====================================
+             HERO SECTION
+        ====================================== -->
+
+        <section class="hero-section" id="hero">
+
+            <div class="hero-background">
+
+                <div class="hero-glow hero-glow-one"></div>
+
+                <div class="hero-glow hero-glow-two"></div>
+
+                <div class="hero-grid"></div>
+
+            </div>
+
+
+            <div class="container hero-container">
+
+                <div class="hero-copy">
+
+                    <div class="eyebrow hero-eyebrow">
+
+                        <span class="status-dot"></span>
+
+                        <span>
+                            YOUR BUSINESS, REIMAGINED
+                        </span>
+
+                        <svg class="icon icon-small">
+                            <use href="#icon-sparkles"></use>
+                        </svg>
+
+                    </div>
+
+
+                    <h1 class="hero-title">
+
+                        Your business.
+
+                        <br>
+
+                        <span class="hero-title-gradient">
+                            Without the chaos.
+                        </span>
+
+                    </h1>
+
+
+                    <p class="hero-description">
+
+                        Meet the all-in-one platform that brings
+                        your online store, inventory, POS, and
+                        business insights together.
+
+                        <strong>
+                            Less busywork. More growth.
+                        </strong>
+
+                    </p>
+
+
+                    <div class="hero-actions">
+
+                        <a
+    href="./dashboard/index.html"
+    class="button button-primary button-large"
+>
+    Start building
+
+    <svg class="icon">
+        <use href="#icon-arrow-right"></use>
+    </svg>
+</a>
+
+
+                        <a
+                            href="#platform"
+                            class="button button-secondary button-large"
+                        >
+
+                            <span class="button-play-icon">
+
+                                <svg class="icon">
+                                    <use href="#icon-grid"></use>
+                                </svg>
+
+                            </span>
+
+                            Explore the platform
+
+                        </a>
+
+                    </div>
+
+
+                    <div class="hero-social-proof">
+
+                        <div class="social-proof-avatars">
+
+                            <span class="avatar avatar-one">J</span>
+
+                            <span class="avatar avatar-two">A</span>
+
+                            <span class="avatar avatar-three">M</span>
+
+                            <span class="avatar avatar-four">S</span>
+
+                            <span class="avatar avatar-plus">+</span>
+
+                        </div>
+
+
+                        <div class="social-proof-copy">
+
+                            <div class="social-proof-stars">
+                                ★★★★★
+                            </div>
+
+                            <p>
+                                Built for ambitious businesses
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="hero-trust-points">
+
+                        <span>
+
+                            <svg class="icon icon-small">
+                                <use href="#icon-check"></use>
+                            </svg>
+
+                            One unified platform
+
+                        </span>
+
+                        <span>
+
+                            <svg class="icon icon-small">
+                                <use href="#icon-check"></use>
+                            </svg>
+
+                            Built to scale
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- HERO DASHBOARD PREVIEW -->
+
+                <div
+                    class="hero-visual"
+                    id="platform"
+                    aria-label="Preview of the Nexodra business dashboard"
+                >
+
+                    <div class="dashboard-orbit orbit-one"></div>
+
+                    <div class="dashboard-orbit orbit-two"></div>
+
+
+                    <div class="floating-label floating-label-top">
+
+                        <span class="floating-label-icon floating-purple">
+
+                            <svg class="icon">
+                                <use href="#icon-chart"></use>
+                            </svg>
+
+                        </span>
+
+                        <span class="floating-label-copy">
+
+                            <small>Revenue overview</small>
+
+                            <strong>Live insights</strong>
+
+                        </span>
+
+                        <span class="live-indicator"></span>
+
+                    </div>
+
+
+                    <div class="dashboard-window">
+
+                        <!-- Dashboard topbar -->
+
+                        <div class="dashboard-topbar">
+
+                            <div class="dashboard-brand">
+
+                                <span class="dashboard-brand-icon">
+
+                                    <span></span>
+
+                                </span>
+
+                                <span>Nexodra</span>
+
+                            </div>
+
+
+                            <div class="dashboard-topbar-right">
+
+                                <span class="dashboard-period">
+                                    Overview
+                                </span>
+
+                                <button
+                                    class="dashboard-icon-button"
+                                    type="button"
+                                    aria-label="Notifications"
+                                >
+
+                                    <svg class="icon">
+                                        <use href="#icon-bell"></use>
+                                    </svg>
+
+                                    <span class="notification-dot"></span>
+
+                                </button>
+
+
+                                <div class="dashboard-user-avatar">
+                                    JD
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Dashboard body -->
+
+                        <div class="dashboard-body">
+
+                            <!-- Sidebar -->
+
+                            <aside class="dashboard-sidebar">
+
+                                <span class="sidebar-label">
+                                    WORKSPACE
+                                </span>
+
+                                <a
+                                    href="#platform"
+                                    class="sidebar-link sidebar-link-active"
+                                >
+
+                                    <svg class="icon">
+                                        <use href="#icon-grid"></use>
+                                    </svg>
+
+                                    <span>Overview</span>
+
+                                </a>
+
+
+                                <a
+                                    href="#features"
+                                    class="sidebar-link"
+                                >
+
+                                    <svg class="icon">
+                                        <use href="#icon-shopping-bag"></use>
+                                    </svg>
+
+                                    <span>Orders</span>
+
+                                    <span class="sidebar-count">8</span>
+
+                                </a>
+
+
+                                <a
+                                    href="#features"
+                                    class="sidebar-link"
+                                >
+
+                                    <svg class="icon">
+                                        <use href="#icon-package"></use>
+                                    </svg>
+
+                                    <span>Inventory</span>
+
+                                </a>
+
+
+                                <a
+                                    href="#features"
+                                    class="sidebar-link"
+                                >
+
+                                    <svg class="icon">
+                                        <use href="#icon-credit-card"></use>
+                                    </svg>
+
+                                    <span>Point of sale</span>
+
+                                </a>
+
+
+                                <a
+                                    href="#insights"
+                                    class="sidebar-link"
+                                >
+
+                                    <svg class="icon">
+                                        <use href="#icon-chart"></use>
+                                    </svg>
+
+                                    <span>Analytics</span>
+
+                                </a>
+
+
+                                <div class="sidebar-bottom">
+
+                                    <div class="sidebar-upgrade">
+
+                                        <svg class="icon">
+                                            <use href="#icon-sparkles"></use>
+                                        </svg>
+
+                                        <strong>
+                                            Grow with Nexodra
+                                        </strong>
+
+                                        <p>
+                                            Everything you need
+                                            to move forward.
+                                        </p>
+
+                                    </div>
+
+                                </div>
+
+                            </aside>
+
+
+                            <!-- Main dashboard content -->
+
+                            <div class="dashboard-main">
+
+                                <div class="dashboard-heading">
+
+                                    <div>
+
+                                        <p class="dashboard-greeting">
+                                            YOUR BUSINESS AT A GLANCE
+                                        </p>
+
+                                        <h2>
+                                            Good morning, Jordan
+                                            <span>✦</span>
+                                        </h2>
+
+                                        <p class="dashboard-subtitle">
+                                            Here's what's happening
+                                            with your store.
+                                        </p>
+
+                                    </div>
+
+
+                                    <button
+                                        type="button"
+                                        class="dashboard-date"
+                                    >
+
+                                        <svg class="icon icon-small">
+                                            <use href="#icon-clock"></use>
+                                        </svg>
+
+                                        Last 7 days
+
+                                        <svg class="icon icon-small">
+                                            <use href="#icon-chevron-down"></use>
+                                        </svg>
+
+                                    </button>
+
+                                </div>
+
+
+                                <!-- Metric cards -->
+
+                                <div class="dashboard-metrics">
+
+                                    <article class="metric-card">
+
+                                        <div class="metric-top">
+
+                                            <span>
+                                                Total revenue
+                                            </span>
+
+                                            <span class="metric-icon metric-icon-purple">
+
+                                                <svg class="icon">
+                                                    <use href="#icon-chart"></use>
+                                                </svg>
+
+                                            </span>
+
+                                        </div>
+
+
+                                        <div class="metric-value">
+                                            $24,680
+                                        </div>
+
+
+                                        <div class="metric-footer">
+
+                                            <span class="metric-change">
+
+                                                <svg class="icon icon-small">
+                                                    <use href="#icon-trending-up"></use>
+                                                </svg>
+
+                                                +12.8%
+
+                                            </span>
+
+                                            <span>
+                                                vs. last week
+                                            </span>
+
+                                        </div>
+
+                                    </article>
+
+
+                                    <article class="metric-card">
+
+                                        <div class="metric-top">
+
+                                            <span>
+                                                Total orders
+                                            </span>
+
+                                            <span class="metric-icon metric-icon-blue">
+
+                                                <svg class="icon">
+                                                    <use href="#icon-shopping-bag"></use>
+                                                </svg>
+
+                                            </span>
+
+                                        </div>
+
+
+                                        <div class="metric-value">
+                                            1,284
+                                        </div>
+
+
+                                        <div class="metric-footer">
+
+                                            <span class="metric-change">
+
+                                                <svg class="icon icon-small">
+                                                    <use href="#icon-trending-up"></use>
+                                                </svg>
+
+                                                +8.4%
+
+                                            </span>
+
+                                            <span>
+                                                vs. last week
+                                            </span>
+
+                                        </div>
+
+                                    </article>
+
+
+                                    <article class="metric-card">
+
+                                        <div class="metric-top">
+
+                                            <span>
+                                                Products
+                                            </span>
+
+                                            <span class="metric-icon metric-icon-green">
+
+                                                <svg class="icon">
+                                                    <use href="#icon-package"></use>
+                                                </svg>
+
+                                            </span>
+
+                                        </div>
+
+
+                                        <div class="metric-value">
+                                            3,842
+                                        </div>
+
+
+                                        <div class="metric-footer">
+
+                                            <span class="metric-neutral">
+                                                Inventory tracked
+                                            </span>
+
+                                        </div>
+
+                                    </article>
+
+                                </div>
+
+
+                                <!-- Revenue chart -->
+
+                                <article class="dashboard-panel revenue-panel">
+
+                                    <div class="panel-heading">
+
+                                        <div>
+
+                                            <h3>
+                                                Revenue overview
+                                            </h3>
+
+                                            <p>
+                                                Track your business performance
+                                            </p>
+
+                                        </div>
+
+
+                                        <button
+                                            class="panel-menu-button"
+                                            type="button"
+                                            aria-label="Revenue chart options"
+                                        >
+
+                                            <svg class="icon">
+                                                <use href="#icon-menu-dots"></use>
+                                            </svg>
+
+                                        </button>
+
+                                    </div>
+
+
+                                    <div class="revenue-summary">
+
+                                        <span class="revenue-amount">
+                                            $24,680.00
+                                        </span>
+
+                                        <span class="revenue-growth">
+                                            +12.8%
+                                        </span>
+
+                                    </div>
+
+
+                                    <div
+                                        class="revenue-chart"
+                                        role="img"
+                                        aria-label="Illustrative weekly revenue chart showing an upward trend"
+                                    >
+
+                                        <div class="chart-y-labels">
+
+                                            <span>$8k</span>
+
+                                            <span>$6k</span>
+
+                                            <span>$4k</span>
+
+                                            <span>$2k</span>
+
+                                            <span>$0</span>
+
+                                        </div>
+
+
+                                        <div class="chart-plot">
+
+                                            <div class="chart-grid-lines">
+
+                                                <span></span>
+
+                                                <span></span>
+
+                                                <span></span>
+
+                                                <span></span>
+
+                                                <span></span>
+
+                                            </div>
+
+
+                                            <svg
+                                                class="revenue-svg"
+                                                viewBox="0 0 500 170"
+                                                preserveAspectRatio="none"
+                                                aria-hidden="true"
+                                            >
+
+                                                <defs>
+
+                                                    <linearGradient
+                                                        id="revenueFill"
+                                                        x1="0"
+                                                        y1="0"
+                                                        x2="0"
+                                                        y2="1"
+                                                    >
+
+                                                        <stop
+                                                            offset="0%"
+                                                            stop-color="#8b5cf6"
+                                                            stop-opacity=".28"
+                                                        />
+
+                                                        <stop
+                                                            offset="100%"
+                                                            stop-color="#8b5cf6"
+                                                            stop-opacity="0"
+                                                        />
+
+                                                    </linearGradient>
+
+                                                </defs>
+
+
+                                                <path
+                                                    class="chart-area"
+                                                    d="M0 135 C25 125 35 115 65 122 S105 95 135 108 S175 72 205 91 S245 100 275 65 S320 86 350 55 S400 65 430 32 S470 40 500 10 L500 170 L0 170 Z"
+                                                    fill="url(#revenueFill)"
+                                                />
+
+
+                                                <path
+                                                    class="chart-line"
+                                                    d="M0 135 C25 125 35 115 65 122 S105 95 135 108 S175 72 205 91 S245 100 275 65 S320 86 350 55 S400 65 430 32 S470 40 500 10"
+                                                    fill="none"
+                                                    stroke="#9b7aff"
+                                                    stroke-width="3"
+                                                    stroke-linecap="round"
+                                                />
+
+
+                                                <circle
+                                                    cx="275"
+                                                    cy="65"
+                                                    r="5"
+                                                    fill="#ffffff"
+                                                    stroke="#9b7aff"
+                                                    stroke-width="3"
+                                                />
+
+                                            </svg>
+
+
+                                            <div class="chart-tooltip">
+
+                                                <span>
+                                                    Wednesday
+                                                </span>
+
+                                                <strong>
+                                                    $5,420
+                                                </strong>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="chart-x-labels">
+
+                                        <span>Mon</span>
+
+                                        <span>Tue</span>
+
+                                        <span>Wed</span>
+
+                                        <span>Thu</span>
+
+                                        <span>Fri</span>
+
+                                        <span>Sat</span>
+
+                                        <span>Sun</span>
+
+                                    </div>
+
+                                </article>
+
+
+                                <!-- Dashboard lower panels -->
+
+                                <div class="dashboard-lower-grid">
+
+                                    <article class="dashboard-panel inventory-panel">
+
+                                        <div class="panel-heading">
+
+                                            <div>
+
+                                                <h3>
+                                                    Inventory health
+                                                </h3>
+
+                                                <p>
+                                                    Stock status
+                                                </p>
+
+                                            </div>
+
+                                            <svg class="icon">
+                                                <use href="#icon-package"></use>
+                                            </svg>
+
+                                        </div>
+
+
+                                        <div class="inventory-health">
+
+                                            <div class="inventory-ring">
+
+                                                <div class="inventory-ring-inner">
+
+                                                    <strong>84%</strong>
+
+                                                    <span>In stock</span>
+
+                                                </div>
+
+                                            </div>
+
+
+                                            <div class="inventory-legend">
+
+                                                <div>
+
+                                                    <span class="legend-dot legend-green"></span>
+
+                                                    <span>Healthy</span>
+
+                                                    <strong>84%</strong>
+
+                                                </div>
+
+
+                                                <div>
+
+                                                    <span class="legend-dot legend-yellow"></span>
+
+                                                    <span>Low stock</span>
+
+                                                    <strong>11%</strong>
+
+                                                </div>
+
+
+                                                <div>
+
+                                                    <span class="legend-dot legend-red"></span>
+
+                                                    <span>Out of stock</span>
+
+                                                    <strong>5%</strong>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </article>
+
+
+                                    <article class="dashboard-panel orders-panel">
+
+                                        <div class="panel-heading">
+
+                                            <div>
+
+                                                <h3>
+                                                    Recent orders
+                                                </h3>
+
+                                                <p>
+                                                    Latest transactions
+                                                </p>
+
+                                            </div>
+
+
+                                            <a
+                                                href="#features"
+                                                class="panel-text-link"
+                                            >
+                                                View all
+                                            </a>
+
+                                        </div>
+
+
+                                        <div class="order-row">
+
+                                            <span class="order-product-icon product-purple">
+                                                <svg class="icon">
+                                                    <use href="#icon-package"></use>
+                                                </svg>
+                                            </span>
+
+                                            <span class="order-info">
+
+                                                <strong>
+                                                    Wireless headphones
+                                                </strong>
+
+                                                <small>
+                                                    #NX-2048
+                                                </small>
+
+                                            </span>
+
+                                            <span class="order-price">
+                                                $129.00
+                                            </span>
+
+                                        </div>
+
+
+                                        <div class="order-row">
+
+                                            <span class="order-product-icon product-blue">
+                                                <svg class="icon">
+                                                    <use href="#icon-package"></use>
+                                                </svg>
+                                            </span>
+
+                                            <span class="order-info">
+
+                                                <strong>
+                                                    Smart watch
+                                                </strong>
+
+                                                <small>
+                                                    #NX-2047
+                                                </small>
+
+                                            </span>
+
+                                            <span class="order-price">
+                                                $249.00
+                                            </span>
+
+                                        </div>
+
+
+                                        <div class="order-row">
+
+                                            <span class="order-product-icon product-green">
+                                                <svg class="icon">
+                                                    <use href="#icon-package"></use>
+                                                </svg>
+                                            </span>
+
+                                            <span class="order-info">
+
+                                                <strong>
+                                                    Travel backpack
+                                                </strong>
+
+                                                <small>
+                                                    #NX-2046
+                                                </small>
+
+                                            </span>
+
+                                            <span class="order-price">
+                                                $89.00
+                                            </span>
+
+                                        </div>
+
+                                    </article>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Floating order notification -->
+
+                    <div class="floating-notification">
+
+                        <span class="notification-icon">
+
+                            <svg class="icon">
+                                <use href="#icon-check"></use>
+                            </svg>
+
+                        </span>
+
+
+                        <span class="notification-copy">
+
+                            <strong>
+                                Order completed
+                            </strong>
+
+                            <small>
+                                Payment received successfully
+                            </small>
+
+                        </span>
+
+
+                        <span class="notification-amount">
+                            +$249
+                        </span>
+
+                    </div>
+
+
+                    <!-- Floating stock notification -->
+
+                    <div class="floating-stock-card">
+
+                        <span class="stock-card-icon">
+
+                            <svg class="icon">
+                                <use href="#icon-package"></use>
+                            </svg>
+
+                        </span>
+
+
+                        <span class="stock-card-copy">
+
+                            <strong>
+                                Stock updated
+                            </strong>
+
+                            <small>
+                                Inventory stays in sync
+                            </small>
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Hero bottom transition -->
+
+            <div class="hero-bottom-fade"></div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             TRUST / CAPABILITY STRIP
+        ====================================== -->
+
+        <section class="trust-section">
+
+            <div class="container">
+
+                <div class="trust-heading">
+
+                    <span class="section-overline">
+                        EVERYTHING CONNECTED
+                    </span>
+
+                    <p>
+                        One connected ecosystem for every part
+                        of your business.
+                    </p>
+
+                </div>
+
+
+                <div class="trust-capabilities">
+
+                    <div class="trust-capability">
+
+                        <span class="trust-capability-icon">
+                            <svg class="icon">
+                                <use href="#icon-shopping-bag"></use>
+                            </svg>
+                        </span>
+
+                        <span>Online store</span>
+
+                    </div>
+
+
+                    <span class="capability-divider"></span>
+
+
+                    <div class="trust-capability">
+
+                        <span class="trust-capability-icon">
+                            <svg class="icon">
+                                <use href="#icon-credit-card"></use>
+                            </svg>
+                        </span>
+
+                        <span>Point of sale</span>
+
+                    </div>
+
+
+                    <span class="capability-divider"></span>
+
+
+                    <div class="trust-capability">
+
+                        <span class="trust-capability-icon">
+                            <svg class="icon">
+                                <use href="#icon-package"></use>
+                            </svg>
+                        </span>
+
+                        <span>Inventory</span>
+
+                    </div>
+
+
+                    <span class="capability-divider"></span>
+
+
+                    <div class="trust-capability">
+
+                        <span class="trust-capability-icon">
+                            <svg class="icon">
+                                <use href="#icon-chart"></use>
+                            </svg>
+                        </span>
+
+                        <span>Analytics</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             FEATURES SECTION
+        ====================================== -->
+
+        <section class="features-section section-padding" id="features">
+
+            <div class="container">
+
+                <div class="section-heading section-heading-centered">
+
+                    <span class="section-overline">
+
+                        <svg class="icon icon-small">
+                            <use href="#icon-sparkles"></use>
+                        </svg>
+
+                        ONE POWERFUL PLATFORM
+
+                    </span>
+
+
+                    <h2 class="section-title">
+
+                        Everything you need.
+
+                        <br>
+
+                        <span class="text-gradient">
+                            Nothing holding you back.
+                        </span>
+
+                    </h2>
+
+
+                    <p class="section-description">
+
+                        Stop juggling disconnected tools.
+
+                        Nexodra brings your essential business
+                        operations into one seamless experience.
+
+                    </p>
+
+                </div>
+
+
+                <div class="features-grid">
+
+                    <!-- Feature 1 -->
+
+                    <article class="feature-card feature-card-large">
+
+                        <div class="feature-card-copy">
+
+                            <div class="feature-icon feature-icon-purple">
+
+                                <svg class="icon">
+                                    <use href="#icon-shopping-bag"></use>
+                                </svg>
+
+                            </div>
+
+
+                            <span class="feature-number">
+                                01 / ONLINE STORE
+                            </span>
+
+
+                            <h3>
+                                Your storefront.
+                                Your rules.
+                            </h3>
+
+
+                            <p>
+                                Create a shopping experience that
+                                reflects your brand. Manage your
+                                products, organize your catalog,
+                                and bring your customers closer
+                                to checkout.
+                            </p>
+
+
+                            <a
+                                href="#get-started"
+                                class="feature-link"
+                            >
+
+                                Explore online selling
+
+                                <svg class="icon icon-small">
+                                    <use href="#icon-arrow-right"></use>
+                                </svg>
+
+                            </a>
+
+                        </div>
+
+
+                        <div class="feature-visual storefront-visual">
+
+                            <div class="mini-store-window">
+
+                                <div class="mini-store-toolbar">
+
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+
+                                    <div class="mini-store-url">
+                                        yourstore.nexodra
+                                    </div>
+
+                                </div>
+
+
+                                <div class="mini-store-content">
+
+                                    <div class="mini-store-header">
+
+                                        <div class="mini-store-logo">
+                                            YOUR BRAND
+                                        </div>
+
+                                        <div class="mini-store-nav">
+                                            SHOP &nbsp; ABOUT &nbsp; BAG
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="mini-store-hero">
+
+                                        <span class="mini-store-kicker">
+                                            THE NEW COLLECTION
+                                        </span>
+
+                                        <h4>
+                                            Made for
+                                            <span>everyday.</span>
+                                        </h4>
+
+                                        <p>
+                                            Thoughtfully selected.
+                                            Beautifully designed.
+                                        </p>
+
+                                        <span class="mini-store-button">
+                                            DISCOVER MORE
+                                        </span>
+
+                                    </div>
+
+
+                                    <div class="mini-product-grid">
+
+                                        <div class="mini-product">
+
+                                            <div class="mini-product-image mini-product-one">
+                                                <span>01</span>
+                                            </div>
+
+                                            <div class="mini-product-info">
+                                                <span>Essential series</span>
+                                                <strong>$89.00</strong>
+                                            </div>
+
+                                        </div>
+
+
+                                        <div class="mini-product">
+
+                                            <div class="mini-product-image mini-product-two">
+                                                <span>02</span>
+                                            </div>
+
+                                            <div class="mini-product-info">
+                                                <span>Modern classics</span>
+                                                <strong>$129.00</strong>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- Feature 2 -->
+
+                    <article class="feature-card">
+
+                        <div class="feature-card-copy">
+
+                            <div class="feature-icon feature-icon-blue">
+
+                                <svg class="icon">
+                                    <use href="#icon-credit-card"></use>
+                                </svg>
+
+                            </div>
+
+
+                            <span class="feature-number">
+                                02 / POINT OF SALE
+                            </span>
+
+
+                            <h3>
+                                Checkout without
+                                the friction.
+                            </h3>
+
+
+                            <p>
+                                Manage in-person transactions,
+                                keep track of sales, and connect
+                                your physical selling operations
+                                with the rest of your business.
+                            </p>
+
+
+                            <a
+                                href="#get-started"
+                                class="feature-link"
+                            >
+
+                                Discover Nexodra POS
+
+                                <svg class="icon icon-small">
+                                    <use href="#icon-arrow-right"></use>
+                                </svg>
+
+                            </a>
+
+                        </div>
+
+
+                        <div class="feature-visual pos-visual">
+
+                            <div class="pos-terminal">
+
+                                <div class="pos-terminal-top">
+
+                                    <div class="pos-brand-mark">
+                                        N
+                                    </div>
+
+                                    <span>
+                                        NEXODRA POS
+                                    </span>
+
+                                    <span class="pos-status-dot"></span>
+
+                                </div>
+
+
+                                <div class="pos-screen">
+
+                                    <div class="pos-screen-heading">
+
+                                        <span>New transaction</span>
+
+                                        <span class="pos-order-id">
+                                            #00482
+                                        </span>
+
+                                    </div>
+
+
+                                    <div class="pos-item">
+
+                                        <span class="pos-item-icon pos-item-icon-one">
+                                            H
+                                        </span>
+
+                                        <span class="pos-item-name">
+                                            <strong>
+                                                Headphones
+                                            </strong>
+
+                                            <small>
+                                                Qty: 1
+                                            </small>
+                                        </span>
+
+                                        <strong>
+                                            $129
+                                        </strong>
+
+                                    </div>
+
+
+                                    <div class="pos-item">
+
+                                        <span class="pos-item-icon pos-item-icon-two">
+                                            W
+                                        </span>
+
+                                        <span class="pos-item-name">
+                                            <strong>
+                                                Smart watch
+                                            </strong>
+
+                                            <small>
+                                                Qty: 1
+                                            </small>
+                                        </span>
+
+                                        <strong>
+                                            $249
+                                        </strong>
+
+                                    </div>
+
+
+                                    <div class="pos-total">
+
+                                        <span>Total</span>
+
+                                        <strong>$378.00</strong>
+
+                                    </div>
+
+
+                                    <div class="pos-pay-button">
+
+                                        <svg class="icon icon-small">
+                                            <use href="#icon-credit-card"></use>
+                                        </svg>
+
+                                        Complete payment
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="pos-floating-chip">
+
+                                <span class="pos-chip-check">
+
+                                    <svg class="icon icon-small">
+                                        <use href="#icon-check"></use>
+                                    </svg>
+
+                                </span>
+
+                                <span>
+                                    Ready to checkout
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- Feature 3 -->
+
+                    <article class="feature-card">
+
+                        <div class="feature-card-copy">
+
+                            <div class="feature-icon feature-icon-green">
+
+                                <svg class="icon">
+                                    <use href="#icon-package"></use>
+                                </svg>
+
+                            </div>
+
+
+                            <span class="feature-number">
+                                03 / INVENTORY MANAGEMENT
+                            </span>
+
+
+                            <h3>
+                                Know your stock.
+                                Own your next move.
+                            </h3>
+
+
+                            <p>
+                                Stay on top of product quantities,
+                                stock movements, and low-stock
+                                alerts. Make inventory decisions
+                                with greater confidence.
+                            </p>
+
+
+                            <a
+                                href="#get-started"
+                                class="feature-link"
+                            >
+
+                                Explore inventory
+
+                                <svg class="icon icon-small">
+                                    <use href="#icon-arrow-right"></use>
+                                </svg>
+
+                            </a>
+
+                        </div>
+
+
+                        <div class="feature-visual stock-visual">
+
+                            <div class="stock-panel">
+
+                                <div class="stock-panel-header">
+
+                                    <div>
+
+                                        <span>INVENTORY OVERVIEW</span>
+
+                                        <h4>
+                                            Stock health
+                                        </h4>
+
+                                    </div>
+
+                                    <span class="stock-panel-badge">
+                                        Live view
+                                    </span>
+
+                                </div>
+
+
+                                <div class="stock-total-row">
+
+                                    <div>
+
+                                        <span>Total products</span>
+
+                                        <strong>3,842</strong>
+
+                                    </div>
+
+                                    <div class="stock-total-change">
+                                        +124 this month
+                                    </div>
+
+                                </div>
+
+
+                                <div class="stock-progress-item">
+
+                                    <div class="stock-progress-heading">
+
+                                        <span>Healthy stock</span>
+
+                                        <strong>84%</strong>
+
+                                    </div>
+
+                                    <div class="stock-progress-track">
+                                        <span class="stock-progress-fill stock-fill-green"></span>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="stock-progress-item">
+
+                                    <div class="stock-progress-heading">
+
+                                        <span>Low stock</span>
+
+                                        <strong>11%</strong>
+
+                                    </div>
+
+                                    <div class="stock-progress-track">
+                                        <span class="stock-progress-fill stock-fill-yellow"></span>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="stock-progress-item">
+
+                                    <div class="stock-progress-heading">
+
+                                        <span>Out of stock</span>
+
+                                        <strong>5%</strong>
+
+                                    </div>
+
+                                    <div class="stock-progress-track">
+                                        <span class="stock-progress-fill stock-fill-red"></span>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="stock-alert">
+
+                                    <span class="stock-alert-icon">!</span>
+
+                                    <span>
+
+                                        <strong>
+                                            Stock needs attention
+                                        </strong>
+
+                                        <small>
+                                            Review low-stock products
+                                        </small>
+
+                                    </span>
+
+                                    <svg class="icon icon-small">
+                                        <use href="#icon-arrow-right"></use>
+                                    </svg>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- Feature 4 -->
+
+                    <article class="feature-card">
+
+                        <div class="feature-card-copy">
+
+                            <div class="feature-icon feature-icon-orange">
+
+                                <svg class="icon">
+                                    <use href="#icon-chart"></use>
+                                </svg>
+
+                            </div>
+
+
+                            <span class="feature-number">
+                                04 / BUSINESS INTELLIGENCE
+                            </span>
+
+
+                            <h3>
+                                Turn numbers
+                                into your advantage.
+                            </h3>
+
+
+                            <p>
+                                Understand sales trends, monitor
+                                performance, and use your business
+                                data to make smarter decisions.
+                            </p>
+
+
+                            <a
+                                href="#insights"
+                                class="feature-link"
+                            >
+
+                                Explore analytics
+
+                                <svg class="icon icon-small">
+                                    <use href="#icon-arrow-right"></use>
+                                </svg>
+
+                            </a>
+
+                        </div>
+
+
+                        <div class="feature-visual analytics-visual">
+
+                            <div class="analytics-card">
+
+                                <div class="analytics-card-header">
+
+                                    <span>PERFORMANCE</span>
+
+                                    <span class="analytics-period">
+                                        This month
+                                    </span>
+
+                                </div>
+
+
+                                <div class="analytics-big-number">
+                                    $42,890
+                                </div>
+
+
+                                <div class="analytics-growth">
+
+                                    <svg class="icon icon-small">
+                                        <use href="#icon-trending-up"></use>
+                                    </svg>
+
+                                    <strong>+18.6%</strong>
+
+                                    <span>
+                                        growth over previous period
+                                    </span>
+
+                                </div>
+
+
+                                <div class="analytics-bars">
+
+                                    <div class="analytics-bar-group">
+                                        <span class="analytics-bar bar-one"></span>
+                                        <span class="analytics-bar bar-two"></span>
+                                        <small>W1</small>
+                                    </div>
+
+                                    <div class="analytics-bar-group">
+                                        <span class="analytics-bar bar-three"></span>
+                                        <span class="analytics-bar bar-four"></span>
+                                        <small>W2</small>
+                                    </div>
+
+                                    <div class="analytics-bar-group">
+                                        <span class="analytics-bar bar-five"></span>
+                                        <span class="analytics-bar bar-six"></span>
+                                        <small>W3</small>
+                                    </div>
+
+                                    <div class="analytics-bar-group">
+                                        <span class="analytics-bar bar-seven"></span>
+                                        <span class="analytics-bar bar-eight"></span>
+                                        <small>W4</small>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="analytics-legend">
+
+                                    <span>
+                                        <i class="legend-dot legend-purple"></i>
+                                        Revenue
+                                    </span>
+
+                                    <span>
+                                        <i class="legend-dot legend-blue"></i>
+                                        Orders
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             PLATFORM SECTION
+        ====================================== -->
+
+        <section class="platform-section section-padding" id="solutions">
+
+            <div class="container">
+
+                <div class="platform-grid">
+
+                    <div class="platform-copy">
+
+                        <span class="section-overline">
+                            BUILT FOR THE WAY YOU WORK
+                        </span>
+
+
+                        <h2 class="section-title">
+
+                            Your entire operation.
+
+                            <br>
+
+                            <span class="text-gradient">
+                                Finally in sync.
+                            </span>
+
+                        </h2>
+
+
+                        <p class="section-description">
+
+                            Your store shouldn't operate in silos.
+
+                            Nexodra brings your sales channels,
+                            products, and business information
+                            into one connected workflow.
+
+                        </p>
+
+
+                        <div class="platform-benefits">
+
+                            <div class="platform-benefit">
+
+                                <span class="platform-benefit-icon">
+
+                                    <svg class="icon">
+                                        <use href="#icon-check"></use>
+                                    </svg>
+
+                                </span>
+
+                                <div>
+
+                                    <h3>
+                                        One source of truth
+                                    </h3>
+
+                                    <p>
+                                        Keep your business information
+                                        organized in one place.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="platform-benefit">
+
+                                <span class="platform-benefit-icon">
+
+                                    <svg class="icon">
+                                        <use href="#icon-check"></use>
+                                    </svg>
+
+                                </span>
+
+                                <div>
+
+                                    <h3>
+                                        Connected workflows
+                                    </h3>
+
+                                    <p>
+                                        Bring orders, products, and
+                                        sales operations together.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="platform-benefit">
+
+                                <span class="platform-benefit-icon">
+
+                                    <svg class="icon">
+                                        <use href="#icon-check"></use>
+                                    </svg>
+
+                                </span>
+
+                                <div>
+
+                                    <h3>
+                                        A clearer view of growth
+                                    </h3>
+
+                                    <p>
+                                        Understand what's happening
+                                        across your business.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                        <a
+                            href="#get-started"
+                            class="button button-primary button-large"
+                        >
+
+                            Discover the platform
+
+                            <svg class="icon">
+                                <use href="#icon-arrow-right"></use>
+                            </svg>
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- Connected ecosystem visual -->
+
+                    <div class="ecosystem-visual">
+
+                        <div class="ecosystem-glow"></div>
+
+
+                        <div class="ecosystem-orbit ecosystem-orbit-one"></div>
+
+                        <div class="ecosystem-orbit ecosystem-orbit-two"></div>
+
+
+                        <div class="ecosystem-connector ecosystem-connector-one"></div>
+
+                        <div class="ecosystem-connector ecosystem-connector-two"></div>
+
+                        <div class="ecosystem-connector ecosystem-connector-three"></div>
+
+                        <div class="ecosystem-connector ecosystem-connector-four"></div>
+
+
+                        <div class="ecosystem-node ecosystem-node-store">
+
+                            <span class="ecosystem-node-icon ecosystem-store-icon">
+
+                                <svg class="icon">
+                                    <use href="#icon-shopping-bag"></use>
+                                </svg>
+
+                            </span>
+
+                            <strong>Online store</strong>
+
+                            <small>Digital sales</small>
+
+                        </div>
+
+
+                        <div class="ecosystem-node ecosystem-node-pos">
+
+                            <span class="ecosystem-node-icon ecosystem-pos-icon">
+
+                                <svg class="icon">
+                                    <use href="#icon-credit-card"></use>
+                                </svg>
+
+                            </span>
+
+                            <strong>POS</strong>
+
+                            <small>In-person sales</small>
+
+                        </div>
+
+
+                        <div class="ecosystem-node ecosystem-node-inventory">
+
+                            <span class="ecosystem-node-icon ecosystem-inventory-icon">
+
+                                <svg class="icon">
+                                    <use href="#icon-package"></use>
+                                </svg>
+
+                            </span>
+
+                            <strong>Inventory</strong>
+
+                            <small>Stock control</small>
+
+                        </div>
+
+
+                        <div class="ecosystem-node ecosystem-node-analytics">
+
+                            <span class="ecosystem-node-icon ecosystem-analytics-icon">
+
+                                <svg class="icon">
+                                    <use href="#icon-chart"></use>
+                                </svg>
+
+                            </span>
+
+                            <strong>Analytics</strong>
+
+                            <small>Business insights</small>
+
+                        </div>
+
+
+                        <div class="ecosystem-center">
+
+                            <div class="ecosystem-center-logo">
+
+                                <span class="ecosystem-logo-symbol">
+                                    N
+                                </span>
+
+                            </div>
+
+                            <strong>
+                                nexodra<span>.</span>
+                            </strong>
+
+                            <small>
+                                ONE CONNECTED BUSINESS
+                            </small>
+
+                        </div>
+
+
+                        <div class="ecosystem-caption">
+
+                            <span class="ecosystem-caption-dot"></span>
+
+                            One connected ecosystem
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             ANALYTICS / INSIGHTS SECTION
+        ====================================== -->
+
+        <section class="insights-section section-padding" id="insights">
+
+            <div class="container">
+
+                <div class="insights-grid">
+
+                    <div class="insights-copy">
+
+                        <span class="section-overline">
+
+                            <svg class="icon icon-small">
+                                <use href="#icon-sparkles"></use>
+                            </svg>
+
+                            CLARITY CHANGES EVERYTHING
+
+                        </span>
+
+
+                        <h2 class="section-title">
+
+                            Stop guessing.
+
+                            <br>
+
+                            <span class="text-gradient">
+                                Start knowing.
+                            </span>
+
+                        </h2>
+
+
+                        <p class="section-description">
+
+                            Great business decisions start with
+                            understanding your numbers.
+
+                            See your sales, product performance,
+                            and operational trends in one place.
+
+                        </p>
+
+
+                        <div class="insights-list">
+
+                            <div class="insights-list-item">
+
+                                <span class="insights-list-icon">
+                                    <svg class="icon">
+                                        <use href="#icon-chart"></use>
+                                    </svg>
+                                </span>
+
+                                <span>
+
+                                    <strong>
+                                        Sales performance
+                                    </strong>
+
+                                    <small>
+                                        See how your business is performing.
+                                    </small>
+
+                                </span>
+
+                            </div>
+
+
+                            <div class="insights-list-item">
+
+                                <span class="insights-list-icon">
+                                    <svg class="icon">
+                                        <use href="#icon-package"></use>
+                                    </svg>
+                                </span>
+
+                                <span>
+
+                                    <strong>
+                                        Product insights
+                                    </strong>
+
+                                    <small>
+                                        Understand stock and product movement.
+                                    </small>
+
+                                </span>
+
+                            </div>
+
+
+                            <div class="insights-list-item">
+
+                                <span class="insights-list-icon">
+                                    <svg class="icon">
+                                        <use href="#icon-clock"></use>
+                                    </svg>
+                                </span>
+
+                                <span>
+
+                                    <strong>
+                                        Operational visibility
+                                    </strong>
+
+                                    <small>
+                                        Spend less time piecing together information.
+                                    </small>
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <a
+                            href="#get-started"
+                            class="button button-primary button-large"
+                        >
+
+                            Explore business insights
+
+                            <svg class="icon">
+                                <use href="#icon-arrow-right"></use>
+                            </svg>
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- Insights visualization -->
+
+                    <div class="insights-visual">
+
+                        <div class="insights-visual-glow"></div>
+
+
+                        <div class="insights-dashboard">
+
+                            <div class="insights-dashboard-header">
+
+                                <div>
+
+                                    <span class="dashboard-greeting">
+                                        YOUR BUSINESS
+                                    </span>
+
+                                    <h3>
+                                        Performance insights
+                                    </h3>
+
+                                </div>
+
+
+                                <button
+                                    type="button"
+                                    class="insights-filter"
+                                    id="insightsPeriodButton"
+                                >
+
+                                    <span id="insightsPeriodLabel">
+                                        Last 7 days
+                                    </span>
+
+                                    <svg class="icon icon-small">
+                                        <use href="#icon-chevron-down"></use>
+                                    </svg>
+
+                                </button>
+
+                            </div>
+
+
+                            <div class="insights-kpi-grid">
+
+                                <article class="insights-kpi">
+
+                                    <span>
+                                        Revenue
+                                    </span>
+
+                                    <strong>
+                                        $24,680
+                                    </strong>
+
+                                    <small class="kpi-positive">
+                                        +12.8%
+                                    </small>
+
+                                </article>
+
+
+                                <article class="insights-kpi">
+
+                                    <span>
+                                        Orders
+                                    </span>
+
+                                    <strong>
+                                        1,284
+                                    </strong>
+
+                                    <small class="kpi-positive">
+                                        +8.4%
+                                    </small>
+
+                                </article>
+
+
+                                <article class="insights-kpi">
+
+                                    <span>
+                                        Avg. order
+                                    </span>
+
+                                    <strong>
+                                        $19.22
+                                    </strong>
+
+                                    <small class="kpi-positive">
+                                        +3.1%
+                                    </small>
+
+                                </article>
+
+                            </div>
+
+
+                            <div class="insights-chart-panel">
+
+                                <div class="insights-chart-heading">
+
+                                    <div>
+
+                                        <h4>
+                                            Sales activity
+                                        </h4>
+
+                                        <p>
+                                            Illustrative business performance
+                                        </p>
+
+                                    </div>
+
+                                    <span class="insights-chart-indicator">
+                                        <i></i>
+                                        Activity
+                                    </span>
+
+                                </div>
+
+
+                                <div
+                                    class="insights-line-chart"
+                                    role="img"
+                                    aria-label="Illustrative sales activity line chart"
+                                >
+
+                                    <div class="insights-chart-y">
+
+                                        <span>8k</span>
+                                        <span>6k</span>
+                                        <span>4k</span>
+                                        <span>2k</span>
+                                        <span>0</span>
+
+                                    </div>
+
+
+                                    <div class="insights-chart-area">
+
+                                        <div class="insights-chart-grid">
+
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+                                            <span></span>
+
+                                        </div>
+
+
+                                        <svg
+                                            viewBox="0 0 460 170"
+                                            preserveAspectRatio="none"
+                                            aria-hidden="true"
+                                        >
+
+                                            <defs>
+
+                                                <linearGradient
+                                                    id="insightsGradient"
+                                                    x1="0"
+                                                    y1="0"
+                                                    x2="0"
+                                                    y2="1"
+                                                >
+
+                                                    <stop
+                                                        offset="0%"
+                                                        stop-color="#5f7cff"
+                                                        stop-opacity=".24"
+                                                    />
+
+                                                    <stop
+                                                        offset="100%"
+                                                        stop-color="#5f7cff"
+                                                        stop-opacity="0"
+                                                    />
+
+                                                </linearGradient>
+
+                                            </defs>
+
+
+                                            <path
+                                                d="M0 135 C30 125 35 112 65 119 S105 95 130 108 S175 70 200 88 S240 100 270 62 S315 80 345 49 S390 65 415 30 S440 35 460 14 L460 170 L0 170 Z"
+                                                fill="url(#insightsGradient)"
+                                            />
+
+
+                                            <path
+                                                d="M0 135 C30 125 35 112 65 119 S105 95 130 108 S175 70 200 88 S240 100 270 62 S315 80 345 49 S390 65 415 30 S440 35 460 14"
+                                                fill="none"
+                                                stroke="#718cff"
+                                                stroke-width="3"
+                                                stroke-linecap="round"
+                                            />
+
+                                        </svg>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="insights-chart-x">
+
+                                    <span>Mon</span>
+                                    <span>Tue</span>
+                                    <span>Wed</span>
+                                    <span>Thu</span>
+                                    <span>Fri</span>
+                                    <span>Sat</span>
+                                    <span>Sun</span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="insights-bottom-row">
+
+                                <span class="insights-bottom-icon">
+
+                                    <svg class="icon">
+                                        <use href="#icon-trending-up"></use>
+                                    </svg>
+
+                                </span>
+
+                                <span>
+
+                                    <strong>
+                                        A clearer picture of your business
+                                    </strong>
+
+                                    <small>
+                                        Bring your performance indicators together.
+                                    </small>
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             WHY NEXODRA
+        ====================================== -->
+
+        <section class="benefits-section section-padding">
+
+            <div class="container">
+
+                <div class="section-heading section-heading-centered">
+
+                    <span class="section-overline">
+                        THE NEXODRA ADVANTAGE
+                    </span>
+
+
+                    <h2 class="section-title">
+
+                        Built around your
+
+                        <span class="text-gradient">
+                            ambition.
+                        </span>
+
+                    </h2>
+
+
+                    <p class="section-description">
+
+                        Your business deserves tools that help
+                        you move forward, not systems that slow
+                        you down.
+
+                    </p>
+
+                </div>
+
+
+                <div class="benefits-grid">
+
+                    <article class="benefit-card">
+
+                        <div class="benefit-icon benefit-purple">
+
+                            <svg class="icon">
+                                <use href="#icon-grid"></use>
+                            </svg>
+
+                        </div>
+
+
+                        <h3>
+                            Everything in one place
+                        </h3>
+
+
+                        <p>
+                            Bring your essential business
+                            workflows together instead of
+                            constantly switching between tools.
+                        </p>
+
+
+                        <div class="benefit-decoration benefit-decoration-one"></div>
+
+                    </article>
+
+
+                    <article class="benefit-card">
+
+                        <div class="benefit-icon benefit-blue">
+
+                            <svg class="icon">
+                                <use href="#icon-bolt"></use>
+                            </svg>
+
+                        </div>
+
+
+                        <h3>
+                            Designed for momentum
+                        </h3>
+
+
+                        <p>
+                            Keep everyday tasks organized with
+                            a streamlined experience designed
+                            around your business.
+                        </p>
+
+
+                        <div class="benefit-decoration benefit-decoration-two"></div>
+
+                    </article>
+
+
+                    <article class="benefit-card">
+
+                        <div class="benefit-icon benefit-green">
+
+                            <svg class="icon">
+                                <use href="#icon-trending-up"></use>
+                            </svg>
+
+                        </div>
+
+
+                        <h3>
+                            Grow with confidence
+                        </h3>
+
+
+                        <p>
+                            Understand your operations and
+                            make better-informed decisions as
+                            your business evolves.
+                        </p>
+
+
+                        <div class="benefit-decoration benefit-decoration-three"></div>
+
+                    </article>
+
+
+                    <article class="benefit-card">
+
+                        <div class="benefit-icon benefit-orange">
+
+                            <svg class="icon">
+                                <use href="#icon-users"></use>
+                            </svg>
+
+                        </div>
+
+
+                        <h3>
+                            Built for real businesses
+                        </h3>
+
+
+                        <p>
+                            Whether you're selling online,
+                            in person, or through multiple
+                            channels, your business stays
+                            at the center.
+                        </p>
+
+
+                        <div class="benefit-decoration benefit-decoration-four"></div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             HOW IT WORKS
+        ====================================== -->
+
+        <section class="workflow-section section-padding">
+
+            <div class="container">
+
+                <div class="section-heading section-heading-centered">
+
+                    <span class="section-overline">
+                        SIMPLE BY DESIGN
+                    </span>
+
+
+                    <h2 class="section-title">
+
+                        From setup to
+
+                        <span class="text-gradient">
+                            your next big move.
+                        </span>
+
+                    </h2>
+
+
+                    <p class="section-description">
+
+                        A straightforward approach to
+                        organizing the way your business runs.
+
+                    </p>
+
+                </div>
+
+
+                <div class="workflow-grid">
+
+                    <article class="workflow-step">
+
+                        <div class="workflow-number">
+                            01
+                        </div>
+
+
+                        <div class="workflow-icon workflow-icon-purple">
+
+                            <svg class="icon">
+                                <use href="#icon-grid"></use>
+                            </svg>
+
+                        </div>
+
+
+                        <h3>
+                            Bring your business together
+                        </h3>
+
+
+                        <p>
+                            Organize your products, selling
+                            channels, and business operations
+                            in one place.
+                        </p>
+
+
+                        <span class="workflow-connector"></span>
+
+                    </article>
+
+
+                    <article class="workflow-step">
+
+                        <div class="workflow-number">
+                            02
+                        </div>
+
+
+                        <div class="workflow-icon workflow-icon-blue">
+
+                            <svg class="icon">
+                                <use href="#icon-bolt"></use>
+                            </svg>
+
+                        </div>
+
+
+                        <h3>
+                            Manage the everyday
+                        </h3>
+
+
+                        <p>
+                            Keep track of orders, inventory,
+                            and transactions through a
+                            connected workflow.
+                        </p>
+
+
+                        <span class="workflow-connector"></span>
+
+                    </article>
+
+
+                    <article class="workflow-step">
+
+                        <div class="workflow-number">
+                            03
+                        </div>
+
+
+                        <div class="workflow-icon workflow-icon-green">
+
+                            <svg class="icon">
+                                <use href="#icon-trending-up"></use>
+                            </svg>
+
+                        </div>
+
+
+                        <h3>
+                            Make your next move
+                        </h3>
+
+
+                        <p>
+                            Use your business information
+                            to identify opportunities and
+                            plan your next stage of growth.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             SOLUTIONS SECTION
+        ====================================== -->
+
+        <section class="solutions-section section-padding">
+
+            <div class="container">
+
+                <div class="solutions-header">
+
+                    <div>
+
+                        <span class="section-overline">
+                            MADE FOR YOUR JOURNEY
+                        </span>
+
+
+                        <h2 class="section-title">
+
+                            One platform.
+
+                            <br>
+
+                            <span class="text-gradient">
+                                Different possibilities.
+                            </span>
+
+                        </h2>
+
+                    </div>
+
+
+                    <p class="section-description">
+
+                        Nexodra gives different types of
+                        businesses a shared foundation for
+                        managing products, sales, and growth.
+
+                    </p>
+
+                </div>
+
+
+                <div class="solutions-grid">
+
+                    <article class="solution-card solution-ecommerce">
+
+                        <div class="solution-card-art">
+
+                            <div class="solution-art-orbit"></div>
+
+                            <div class="solution-art-icon">
+
+                                <svg class="icon">
+                                    <use href="#icon-shopping-bag"></use>
+                                </svg>
+
+                            </div>
+
+                            <span class="solution-art-badge">
+                                ONLINE
+                            </span>
+
+                        </div>
+
+
+                        <div class="solution-card-content">
+
+                            <span class="solution-label">
+                                DIGITAL COMMERCE
+                            </span>
+
+
+                            <h3>
+                                Ecommerce businesses
+                            </h3>
+
+
+                            <p>
+                                Keep your product catalog,
+                                online orders, and inventory
+                                organized as your store grows.
+                            </p>
+
+
+                            <a
+                                href="#get-started"
+                                class="feature-link"
+                            >
+
+                                Explore this solution
+
+                                <svg class="icon icon-small">
+                                    <use href="#icon-arrow-right"></use>
+                                </svg>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article class="solution-card solution-retail">
+
+                        <div class="solution-card-art">
+
+                            <div class="solution-art-orbit"></div>
+
+                            <div class="solution-art-icon">
+
+                                <svg class="icon">
+                                    <use href="#icon-credit-card"></use>
+                                </svg>
+
+                            </div>
+
+                            <span class="solution-art-badge">
+                                IN PERSON
+                            </span>
+
+                        </div>
+
+
+                        <div class="solution-card-content">
+
+                            <span class="solution-label">
+                                RETAIL OPERATIONS
+                            </span>
+
+
+                            <h3>
+                                Retail stores
+                            </h3>
+
+
+                            <p>
+                                Connect your point of sale,
+                                product information, and
+                                stock management.
+                            </p>
+
+
+                            <a
+                                href="#get-started"
+                                class="feature-link"
+                            >
+
+                                Explore this solution
+
+                                <svg class="icon icon-small">
+                                    <use href="#icon-arrow-right"></use>
+                                </svg>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <article class="solution-card solution-growing">
+
+                        <div class="solution-card-art">
+
+                            <div class="solution-art-orbit"></div>
+
+                            <div class="solution-art-icon">
+
+                                <svg class="icon">
+                                    <use href="#icon-trending-up"></use>
+                                </svg>
+
+                            </div>
+
+                            <span class="solution-art-badge">
+                                GROWTH
+                            </span>
+
+                        </div>
+
+
+                        <div class="solution-card-content">
+
+                            <span class="solution-label">
+                                BUSINESS MANAGEMENT
+                            </span>
+
+
+                            <h3>
+                                Growing businesses
+                            </h3>
+
+
+                            <p>
+                                Create a clearer view of your
+                                business operations as your
+                                team and product range expand.
+                            </p>
+
+
+                            <a
+                                href="#get-started"
+                                class="feature-link"
+                            >
+
+                                Explore this solution
+
+                                <svg class="icon icon-small">
+                                    <use href="#icon-arrow-right"></use>
+                                </svg>
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             PRICING SECTION
+        ====================================== -->
+
+        <section class="pricing-section section-padding" id="pricing">
+
+            <div class="container">
+
+                <div class="section-heading section-heading-centered">
+
+                    <span class="section-overline">
+                        STRAIGHTFORWARD PRICING
+                    </span>
+
+
+                    <h2 class="section-title">
+
+                        Room to start.
+
+                        <br>
+
+                        <span class="text-gradient">
+                            Space to grow.
+                        </span>
+
+                    </h2>
+
+
+                    <p class="section-description">
+
+                        Choose the level of support that fits
+                        your business today, with a path to
+                        grow as your needs change.
+
+                    </p>
+
+                </div>
+
+
+                <div class="pricing-toggle">
+
+                    <span class="pricing-toggle-label pricing-label-active">
+                        Monthly
+                    </span>
+
+
+                    <button
+                        class="billing-switch"
+                        id="billingSwitch"
+                        type="button"
+                        role="switch"
+                        aria-checked="false"
+                        aria-label="Toggle annual billing"
+                    >
+
+                        <span class="billing-switch-knob"></span>
+
+                    </button>
+
+
+                    <span class="pricing-toggle-label">
+                        Yearly
+                    </span>
+
+
+                    <span class="billing-save-badge">
+                        Save more
+                    </span>
+
+                </div>
+
+
+                <div class="pricing-grid">
+
+                    <!-- Starter plan -->
+
+                    <article class="pricing-card">
+
+                        <div class="pricing-card-top">
+
+                            <span class="pricing-plan-label">
+                                GET STARTED
+                            </span>
+
+
+                            <h3>
+                                Starter
+                            </h3>
+
+
+                            <p>
+                                A simple starting point for
+                                organizing your business.
+                            </p>
+
+
+                            <div class="pricing-amount">
+
+                                <span class="pricing-currency">$</span>
+
+                                <strong
+                                    class="pricing-value"
+                                    data-monthly="0"
+                                    data-yearly="0"
+                                >
+                                    0
+                                </strong>
+
+                                <span class="pricing-period">
+                                    / month
+                                </span>
+
+                            </div>
+
+
+                            <span class="pricing-billing-note">
+                                No subscription fee
+                            </span>
+
+
+                            <a
+                                href="#get-started"
+                                class="button button-secondary pricing-button"
+                            >
+
+                                Get started
+
+                                <svg class="icon icon-small">
+                                    <use href="#icon-arrow-right"></use>
+                                </svg>
+
+                            </a>
+
+                        </div>
+
+
+                        <div class="pricing-divider"></div>
+
+
+                        <div class="pricing-features">
+
+                            <span class="pricing-includes">
+                                A place to begin
+                            </span>
+
+
+                            <ul>
+
+                                <li>
+
+                                    <svg class="icon">
+                                        <use href="#icon-check"></use>
+                                    </svg>
+
+                                    Business workspace
+
+                                </li>
+
+
+                                <li>
+
+                                    <svg class="icon">
+                                        <use href="#icon-check"></use>
+                                    </svg>
+
+                                    Essential product organization
+
+                                </li>
+
+
+                                <li>
+
+                                    <svg class="icon">
+                                        <use href="#icon-check"></use>
+                                    </svg>
+
+                                    Basic business overview
+
+                                </li>
+
+
+                                <li>
+
+                                    <svg class="icon">
+                                        <use href="#icon-check"></use>
+                                    </svg>
+
+                                    Access to core features
+
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- Growth plan -->
+
+                    <article class="pricing-card pricing-card-featured">
+
+                        <div class="pricing-popular-badge">
+
+                            <svg class="icon icon-small">
+                                <use href="#icon-sparkles"></use>
+                            </svg>
+
+                            A GREAT PLACE TO GROW
+
+                        </div>
+
+
+                        <div class="pricing-card-top">
+
+                            <span class="pricing-plan-label">
+                                FOR GROWING BUSINESSES
+                            </span>
+
+
+                            <h3>
+                                Growth
+                            </h3>
+
+
+                            <p>
+                                More visibility and control
+                                as your business expands.
+                            </p>
+
+
+                            <div class="pricing-amount">
+
+                                <span class="pricing-currency">$</span>
+
+                                <strong
+                                    class="pricing-value"
+                                    data-monthly="29"
+                                    data-yearly="23"
+                                >
+                                    29
+                                </strong>
+
+                                <span class="pricing-period">
+                                    / month
+                                </span>
+
+                            </div>
+
+
+                            <span class="pricing-billing-note">
+                                <span class="billing-note-monthly">
+                                    Billed monthly
+                                </span>
+
+                                <span class="billing-note-yearly">
+                                    Billed annually
+                                </span>
+                            </span>
+
+
+                            <a
+                                href="#get-started"
+                                class="button button-primary pricing-button"
+                            >
+
+                                Choose Growth
+
+                                <svg class="icon icon-small">
+                                    <use href="#icon-arrow-right"></use>
+                                </svg>
+
+                            </a>
+
+                        </div>
+
+
+                        <div class="pricing-divider"></div>
+
+
+                        <div class="pricing-features">
+
+                            <span class="pricing-includes">
+                                Everything you need to expand
+                            </span>
+
+
+                            <ul>
+
+                                <li>
+
+                                    <svg class="icon">
+                                        <use href="#icon-check"></use>
+                                    </svg>
+
+                                    Inventory management
+
+                                </li>
+
+
+                                <li>
+
+                                    <svg class="icon">
+                                        <use href="#icon-check"></use>
+                                    </svg>
+
+                                    Order management
+
+                                </li>
+
+
+                                <li>
+
+                                    <svg class="icon">
+                                        <use href="#icon-check"></use>
+                                    </svg>
+
+                                    Sales and business insights
+
+                                </li>
+
+
+                                <li>
+
+                                    <svg class="icon">
+                                        <use href="#icon-check"></use>
+                                    </svg>
+
+                                    Point of sale capabilities
+
+                                </li>
+
+
+                                <li>
+
+                                    <svg class="icon">
+                                        <use href="#icon-check"></use>
+                                    </svg>
+
+                                    Expanded management tools
+
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- Enterprise plan -->
+
+                    <article class="pricing-card">
+
+                        <div class="pricing-card-top">
+
+                            <span class="pricing-plan-label">
+                                FOR COMPLEX OPERATIONS
+                            </span>
+
+
+                            <h3>
+                                Enterprise
+                            </h3>
+
+
+                            <p>
+                                A tailored approach for
+                                businesses with bigger needs.
+                            </p>
+
+
+                            <div class="pricing-amount pricing-custom-amount">
+
+                                <strong>
+                                    Let's talk
+                                </strong>
+
+                            </div>
+
+
+                            <span class="pricing-billing-note">
+                                Tailored to your requirements
+                            </span>
+
+
+                            <a
+                                href="#contact"
+                                class="button button-secondary pricing-button"
+                            >
+
+                                Contact our team
+
+                                <svg class="icon icon-small">
+                                    <use href="#icon-arrow-right"></use>
+                                </svg>
+
+                            </a>
+
+                        </div>
+
+
+                        <div class="pricing-divider"></div>
+
+
+                        <div class="pricing-features">
+
+                            <span class="pricing-includes">
+                                Designed around your business
+                            </span>
+
+
+                            <ul>
+
+                                <li>
+
+                                    <svg class="icon">
+                                        <use href="#icon-check"></use>
+                                    </svg>
+
+                                    Tailored requirements
+
+                                </li>
+
+
+                                <li>
+
+                                    <svg class="icon">
+                                        <use href="#icon-check"></use>
+                                    </svg>
+
+                                    Advanced workflow planning
+
+                                </li>
+
+
+                                <li>
+
+                                    <svg class="icon">
+                                        <use href="#icon-check"></use>
+                                    </svg>
+
+                                    Custom onboarding discussions
+
+                                </li>
+
+
+                                <li>
+
+                                    <svg class="icon">
+                                        <use href="#icon-check"></use>
+                                    </svg>
+
+                                    Dedicated support options
+
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <p class="pricing-disclaimer">
+
+                    Pricing displayed is illustrative and
+                    should be finalized before launch.
+                    Features and availability depend on
+                    the actual Nexodra product offering.
+
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             FAQ SECTION
+        ====================================== -->
+
+        <section class="faq-section section-padding" id="faq">
+
+            <div class="container">
+
+                <div class="faq-grid">
+
+                    <div class="faq-intro">
+
+                        <span class="section-overline">
+                            QUESTIONS, ANSWERED
+                        </span>
+
+
+                        <h2 class="section-title">
+
+                            Good questions.
+
+                            <br>
+
+                            <span class="text-gradient">
+                                Clear answers.
+                            </span>
+
+                        </h2>
+
+
+                        <p class="section-description">
+
+                            Everything you need to know about
+                            getting started with Nexodra.
+
+                        </p>
+
+
+                        <div class="faq-contact-card">
+
+                            <span class="faq-contact-icon">
+
+                                <svg class="icon">
+                                    <use href="#icon-users"></use>
+                                </svg>
+
+                            </span>
+
+
+                            <div>
+
+                                <strong>
+                                    Still have questions?
+                                </strong>
+
+                                <p>
+                                    Let's talk about your business.
+                                </p>
+
+                                <a href="#contact">
+
+                                    Get in touch
+
+                                    <svg class="icon icon-small">
+                                        <use href="#icon-arrow-right"></use>
+                                    </svg>
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="faq-list">
+
+                        <article class="faq-item faq-item-open">
+
+                            <button
+                                class="faq-question"
+                                type="button"
+                                aria-expanded="true"
+                            >
+
+                                <span>
+                                    What is Nexodra?
+                                </span>
+
+                                <span class="faq-toggle-icon">
+
+                                    <svg class="icon">
+                                        <use href="#icon-plus"></use>
+                                    </svg>
+
+                                </span>
+
+                            </button>
+
+
+                            <div class="faq-answer">
+
+                                <div class="faq-answer-inner">
+
+                                    <p>
+                                        Nexodra is a business management
+                                        platform designed to bring
+                                        online selling, point of sale,
+                                        inventory management, and
+                                        business insights together
+                                        in one place.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+
+                        <article class="faq-item">
+
+                            <button
+                                class="faq-question"
+                                type="button"
+                                aria-expanded="false"
+                            >
+
+                                <span>
+                                    Can Nexodra manage online and
+                                    in-person sales?
+                                </span>
+
+                                <span class="faq-toggle-icon">
+
+                                    <svg class="icon">
+                                        <use href="#icon-plus"></use>
+                                    </svg>
+
+                                </span>
+
+                            </button>
+
+
+                            <div class="faq-answer">
+
+                                <div class="faq-answer-inner">
+
+                                    <p>
+                                        Nexodra is designed to support
+                                        online commerce and point-of-sale
+                                        workflows. The exact channels,
+                                        payment integrations, and
+                                        synchronization capabilities
+                                        depend on the implemented product.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+
+                        <article class="faq-item">
+
+                            <button
+                                class="faq-question"
+                                type="button"
+                                aria-expanded="false"
+                            >
+
+                                <span>
+                                    How does inventory management work?
+                                </span>
+
+                                <span class="faq-toggle-icon">
+
+                                    <svg class="icon">
+                                        <use href="#icon-plus"></use>
+                                    </svg>
+
+                                </span>
+
+                            </button>
+
+
+                            <div class="faq-answer">
+
+                                <div class="faq-answer-inner">
+
+                                    <p>
+                                        Inventory tools can help you
+                                        organize product information,
+                                        track quantities, and identify
+                                        products that require attention.
+                                        Available automation and stock
+                                        synchronization depend on your
+                                        configured workflows.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+
+                        <article class="faq-item">
+
+                            <button
+                                class="faq-question"
+                                type="button"
+                                aria-expanded="false"
+                            >
+
+                                <span>
+                                    Is Nexodra suitable for a small business?
+                                </span>
+
+                                <span class="faq-toggle-icon">
+
+                                    <svg class="icon">
+                                        <use href="#icon-plus"></use>
+                                    </svg>
+
+                                </span>
+
+                            </button>
+
+
+                            <div class="faq-answer">
+
+                                <div class="faq-answer-inner">
+
+                                    <p>
+                                        The platform is being presented
+                                        for businesses that want a more
+                                        organized way to manage their
+                                        products, transactions, and
+                                        day-to-day operations.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+
+
+                        <article class="faq-item">
+
+                            <button
+                                class="faq-question"
+                                type="button"
+                                aria-expanded="false"
+                            >
+
+                                <span>
+                                    How do I get started?
+                                </span>
+
+                                <span class="faq-toggle-icon">
+
+                                    <svg class="icon">
+                                        <use href="#icon-plus"></use>
+                                    </svg>
+
+                                </span>
+
+                            </button>
+
+
+                            <div class="faq-answer">
+
+                                <div class="faq-answer-inner">
+
+                                    <p>
+                                        Use the Get Started or Contact
+                                        buttons to connect the website
+                                        to your actual onboarding,
+                                        registration, or contact
+                                        workflow when it is ready.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             FINAL CALL TO ACTION
+        ====================================== -->
+
+        <section class="cta-section" id="get-started">
+
+            <div class="container">
+
+                <div class="cta-card">
+
+                    <div class="cta-glow cta-glow-one"></div>
+
+                    <div class="cta-glow cta-glow-two"></div>
+
+                    <div class="cta-grid-pattern"></div>
+
+
+                    <div class="cta-content">
+
+                        <span class="cta-eyebrow">
+
+                            <svg class="icon icon-small">
+                                <use href="#icon-sparkles"></use>
+                            </svg>
+
+                            YOUR NEXT CHAPTER STARTS HERE
+
+                        </span>
+
+
+                        <h2>
+
+                            Your business has
+
+                            <br>
+
+                            <span>
+                                places to go.
+                            </span>
+
+                        </h2>
+
+
+                        <p>
+
+                            Bring your operations together,
+                            get a clearer view of your business,
+                            and build the foundation for what's next.
+
+                        </p>
+
+
+                        <div class="cta-actions">
+
+                            <a
+    href="./dashboard/index.html"
+    class="button button-light button-large"
+>
+    Let's get started
+
+    <svg class="icon">
+        <use href="#icon-arrow-right"></use>
+    </svg>
+  </a>
+
+
+                            <a
+                                href="#features"
+                                class="button button-ghost-light button-large"
+                            >
+                                Explore features
+                            </a>
+
+                        </div>
+
+
+                        <div class="cta-assurance">
+
+                            <span>
+
+                                <svg class="icon icon-small">
+                                    <use href="#icon-check"></use>
+                                </svg>
+
+                                One connected platform
+
+                            </span>
+
+
+                            <span>
+
+                                <svg class="icon icon-small">
+                                    <use href="#icon-check"></use>
+                                </svg>
+
+                                Built around your business
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="cta-decoration">
+
+                        <div class="cta-decoration-orbit cta-orbit-one"></div>
+
+                        <div class="cta-decoration-orbit cta-orbit-two"></div>
+
+
+                        <div class="cta-decoration-core">
+
+                            <span class="cta-decoration-logo">
+                                N
+                            </span>
+
+                        </div>
+
+
+                        <span class="cta-floating-node cta-node-one">
+
+                            <svg class="icon">
+                                <use href="#icon-shopping-bag"></use>
+                            </svg>
+
+                        </span>
+
+
+                        <span class="cta-floating-node cta-node-two">
+
+                            <svg class="icon">
+                                <use href="#icon-package"></use>
+                            </svg>
+
+                        </span>
+
+
+                        <span class="cta-floating-node cta-node-three">
+
+                            <svg class="icon">
+                                <use href="#icon-chart"></use>
+                            </svg>
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             CONTACT SECTION
+        ====================================== -->
+
+        <section class="contact-section section-padding" id="contact">
+
+            <div class="container">
+
+                <div class="contact-grid">
+
+                    <div class="contact-copy">
+
+                        <span class="section-overline">
+                            LET'S TALK BUSINESS
+                        </span>
+
+
+                        <h2 class="section-title">
+
+                            Have a question?
+
+                            <br>
+
+                            <span class="text-gradient">
+                                We're listening.
+                            </span>
+
+                        </h2>
+
+
+                        <p class="section-description">
+
+                            Tell us what you're building and
+                            what you'd like Nexodra to help
+                            you accomplish.
+
+                        </p>
+
+
+                        <div class="contact-info-list">
+
+                            <div class="contact-info-item">
+
+                                <span class="contact-info-icon">
+
+                                    <svg class="icon">
+                                        <use href="#icon-sparkles"></use>
+                                    </svg>
+
+                                </span>
+
+                                <span>
+
+                                    <strong>
+                                        Tell us about your business
+                                    </strong>
+
+                                    <small>
+                                        Share your goals and requirements.
+                                    </small>
+
+                                </span>
+
+                            </div>
+
+
+                            <div class="contact-info-item">
+
+                                <span class="contact-info-icon">
+
+                                    <svg class="icon">
+                                        <use href="#icon-globe"></use>
+                                    </svg>
+
+                                </span>
+
+                                <span>
+
+                                    <strong>
+                                        Explore the possibilities
+                                    </strong>
+
+                                    <small>
+                                        Find the right workflow for your needs.
+                                    </small>
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Contact form -->
+
+                    <div class="contact-form-card">
+
+                        <div class="contact-form-heading">
+
+                            <h3>
+                                Start a conversation
+                            </h3>
+
+                            <p>
+                                Fill in your details below.
+                            </p>
+
+                        </div>
+
+
+                        <form id="contactForm">
+
+                            <div class="form-row">
+
+                                <div class="form-group">
+
+                                    <label for="contactName">
+                                        Your name
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="contactName"
+                                        name="name"
+                                        placeholder="Jordan Smith"
+                                        autocomplete="name"
+                                        required
+                                    >
+
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <label for="contactEmail">
+                                        Email address
+                                    </label>
+
+                                    <input
+                                        type="email"
+                                        id="contactEmail"
+                                        name="email"
+                                        placeholder="you@company.com"
+                                        autocomplete="email"
+                                        required
+                                    >
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="contactBusiness">
+                                    Business name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="contactBusiness"
+                                    name="business"
+                                    placeholder="Your business"
+                                    autocomplete="organization"
+                                >
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="contactInterest">
+                                    What are you interested in?
+                                </label>
+
+                                <select
+                                    id="contactInterest"
+                                    name="interest"
+                                    required
+                                >
+
+                                    <option value="" selected disabled>
+                                        Select an option
+                                    </option>
+
+                                    <option value="online-store">
+                                        Online store
+                                    </option>
+
+                                    <option value="pos">
+                                        Point of sale
+                                    </option>
+
+                                    <option value="inventory">
+                                        Inventory management
+                                    </option>
+
+                                    <option value="analytics">
+                                        Business analytics
+                                    </option>
+
+                                    <option value="everything">
+                                        The complete Nexodra platform
+                                    </option>
+
+                                    <option value="other">
+                                        Something else
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <label for="contactMessage">
+                                    Tell us more
+                                </label>
+
+                                <textarea
+                                    id="contactMessage"
+                                    name="message"
+                                    rows="4"
+                                    placeholder="What would you like to accomplish?"
+                                    required
+                                ></textarea>
+
+                            </div>
+
+
+                            <button
+                                type="submit"
+                                class="button button-primary button-large contact-submit"
+                            >
+
+                                Send your message
+
+                                <svg class="icon">
+                                    <use href="#icon-arrow-right"></use>
+                                </svg>
+
+                            </button>
+
+
+                            <p
+                                class="form-status"
+                                id="contactFormStatus"
+                                role="status"
+                                aria-live="polite"
+                            >
+                            </p>
+
+
+                            <p class="form-privacy-note">
+
+                                Your information should only be
+                                submitted once this form is
+                                connected to a real contact service.
+
+                            </p>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="footer-main">
+
+                <div class="footer-brand-column">
+
+                    <a
+                        href="#top"
+                        class="brand footer-brand"
+                        aria-label="Nexodra home"
+                    >
+
+                        <span class="brand-mark">
+
+                            <span class="brand-mark-shape"></span>
+
+                            <span class="brand-mark-core"></span>
+
+                        </span>
+
+                        <span class="brand-name">
+                            nexodra<span class="brand-period">.</span>
+                        </span>
+
+                    </a>
+
+
+                    <p class="footer-brand-description">
+
+                        Your business, connected.
+
+                        <br>
+
+                        Your next chapter, unlocked.
+
+                    </p>
+
+
+                    <a
+                        href="#get-started"
+                        class="footer-brand-cta"
+                    >
+
+                        Build what's next
+
+                        <svg class="icon icon-small">
+                            <use href="#icon-arrow-up-right"></use>
+                        </svg>
+
+                    </a>
+
+                </div>
+
+
+
+                <div class="footer-links-column">
+
+                    <h3>
+                        Platform
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            <a href="#features">
+                                Online store
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#features">
+                                Point of sale
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#features">
+                                Inventory
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#insights">
+                                Analytics
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+
+                <div class="footer-links-column">
+
+                    <h3>
+                        Explore
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            <a href="#solutions">
+                                Solutions
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#platform">
+                                How it works
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#pricing">
+                                Pricing
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#faq">
+                                FAQs
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+
+                <div class="footer-links-column">
+
+                    <h3>
+                        Nexodra
+                    </h3>
+
+                    <ul>
+
+                        <li>
+                            <a href="#contact">
+                                Contact
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#get-started">
+                                Get started
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#contact">
+                                Support
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="footer-divider"></div>
+
+
+
+            <div class="footer-bottom">
+
+                <p class="footer-copyright">
+
+                    © <span id="currentYear">2026</span>
+                    Nexodra.
+
+                    All rights reserved.
+
+                </p>
+
+
+                <div class="footer-legal-links">
+
+                    <a href="#contact">
+                        Privacy
+                    </a>
+
+                    <a href="#contact">
+                        Terms
+                    </a>
+
+                    <a href="#contact">
+                        Contact
+                    </a>
+
+                </div>
+
+
+                <a
+                    href="#top"
+                    class="back-to-top"
+                    aria-label="Back to top"
+                >
+
+                    <svg class="icon">
+                        <use href="#icon-arrow-right"></use>
+                    </svg>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =========================================
+         BACK TO TOP FLOATING BUTTON
+    ========================================== -->
+
+    <button
+        class="floating-back-to-top"
+        id="floatingBackToTop"
+        type="button"
+        aria-label="Scroll back to top"
+    >
+
+        <svg class="icon">
+            <use href="#icon-arrow-right"></use>
+        </svg>
+
+    </button>
+
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script src="app.js"></script>
+
+</body>
+</html>
