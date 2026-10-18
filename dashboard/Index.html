@@ -1,0 +1,2661 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="NEXODRA — Your command center for analytics, productivity, and intelligent insights."
+    >
+
+    <meta name="theme-color" content="#09090f">
+
+    <title>NEXODRA — Intelligence Dashboard</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="Style.css">
+
+</head>
+
+<body>
+
+    <!-- =========================================
+         APPLICATION ROOT
+    ========================================== -->
+
+    <div class="app-shell" id="appShell">
+
+
+        <!-- =====================================
+             SIDEBAR
+        ====================================== -->
+
+        <aside class="sidebar" id="sidebar">
+
+            <div class="sidebar-top">
+
+                <!-- BRAND -->
+
+                <a href="#overview" class="brand" aria-label="Nexodra home">
+
+                    <span class="brand-symbol">
+
+                        <svg
+                            viewBox="0 0 48 48"
+                            fill="none"
+                            aria-hidden="true"
+                        >
+                            <path
+                                d="M10 36V12L38 36V12"
+                                stroke="currentColor"
+                                stroke-width="5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+
+                            <circle
+                                cx="38"
+                                cy="12"
+                                r="4"
+                                fill="#9B8CFF"
+                            />
+
+                        </svg>
+
+                    </span>
+
+                    <span class="brand-name">
+                        NEXODRA<span class="brand-period">.</span>
+                    </span>
+
+                </a>
+
+
+                <!-- WORKSPACE SELECTOR -->
+
+                <button
+                    class="workspace-selector"
+                    id="workspaceSelector"
+                    type="button"
+                    aria-label="Select workspace"
+                >
+
+                    <span class="workspace-avatar">
+                        N
+                    </span>
+
+                    <span class="workspace-info">
+
+                        <span class="workspace-label">
+                            WORKSPACE
+                        </span>
+
+                        <span class="workspace-name">
+                            Nexodra Studio
+                        </span>
+
+                    </span>
+
+                    <svg
+                        class="icon workspace-chevron"
+                        viewBox="0 0 24 24"
+                        aria-hidden="true"
+                    >
+                        <path d="m7 10 5 5 5-5"/>
+                    </svg>
+
+                </button>
+
+
+                <!-- PRIMARY NAVIGATION -->
+
+                <div class="nav-section">
+
+                    <p class="nav-section-title">
+                        WORKSPACE
+                    </p>
+
+
+                    <nav class="main-navigation" aria-label="Main navigation">
+
+                        <a
+                            href="#overview"
+                            class="nav-item active"
+                            data-page="overview"
+                        >
+
+                            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <rect x="3" y="3" width="7" height="9" rx="2"/>
+                                <rect x="14" y="3" width="7" height="5" rx="2"/>
+                                <rect x="14" y="12" width="7" height="9" rx="2"/>
+                                <rect x="3" y="16" width="7" height="5" rx="2"/>
+                            </svg>
+
+                            <span>Overview</span>
+
+                            <span class="nav-active-indicator"></span>
+
+                        </a>
+
+
+                        <a
+                            href="#analytics"
+                            class="nav-item"
+                            data-page="analytics"
+                        >
+
+                            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M3 3v18h18"/>
+                                <path d="m19 9-5 5-4-4-5 5"/>
+                                <path d="M15 9h4v4"/>
+                            </svg>
+
+                            <span>Analytics</span>
+
+                        </a>
+
+
+                        <a
+                            href="#projects"
+                            class="nav-item"
+                            data-page="projects"
+                        >
+
+                            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <rect x="3" y="4" width="18" height="16" rx="3"/>
+                                <path d="M3 9h18"/>
+                                <path d="M8 4v5"/>
+                                <path d="M7 14h4"/>
+                                <path d="M7 17h8"/>
+                            </svg>
+
+                            <span>Businesses</span>
+
+                            <span class="nav-count">8</span>
+
+                        </a>
+
+
+                        <a
+                            href="#audience"
+                            class="nav-item"
+                            data-page="audience"
+                        >
+
+                            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <circle cx="9" cy="8" r="4"/>
+                                <path d="M3 21v-2a6 6 0 0 1 12 0v2"/>
+                                <path d="M16 4.5a4 4 0 0 1 0 7.5"/>
+                                <path d="M21 21v-2a6 6 0 0 0-4-5.65"/>
+                            </svg>
+
+                            <span>Audience</span>
+
+                        </a>
+
+
+                        <a
+                            href="#reports"
+                            class="nav-item"
+                            data-page="reports"
+                        >
+
+                            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <path d="M14 2v6h6"/>
+                                <path d="M8 13h8"/>
+                                <path d="M8 17h8"/>
+                            </svg>
+
+                            <span>Reports</span>
+
+                        </a>
+
+                    </nav>
+
+                </div>
+
+
+                <!-- TOOLS -->
+
+                <div class="nav-section">
+
+                    <p class="nav-section-title">
+                        TOOLS
+                    </p>
+
+                    <nav class="main-navigation" aria-label="Tools">
+
+                        <a
+                            href="#insights"
+                            class="nav-item"
+                            data-page="insights"
+                        >
+
+                            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 3v2"/>
+                                <path d="M12 19v2"/>
+                                <path d="m4.93 4.93 1.42 1.42"/>
+                                <path d="m17.65 17.65 1.42 1.42"/>
+                                <path d="M3 12h2"/>
+                                <path d="M19 12h2"/>
+                                <path d="m4.93 19.07 1.42-1.42"/>
+                                <path d="m17.65 6.35 1.42-1.42"/>
+                                <circle cx="12" cy="12" r="5"/>
+                            </svg>
+
+                            <span>AI Insights</span>
+
+                            <span class="nav-new">NEW</span>
+
+                        </a>
+
+
+                        <a
+                            href="#integrations"
+                            class="nav-item"
+                            data-page="integrations"
+                        >
+
+                            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <rect x="3" y="3" width="7" height="7" rx="2"/>
+                                <rect x="14" y="3" width="7" height="7" rx="2"/>
+                                <rect x="14" y="14" width="7" height="7" rx="2"/>
+                                <rect x="3" y="14" width="7" height="7" rx="2"/>
+                            </svg>
+
+                            <span>Integrations</span>
+
+                        </a>
+
+
+                        <a
+                            href="#settings"
+                            class="nav-item"
+                            data-page="settings"
+                        >
+
+                            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <circle cx="12" cy="12" r="3"/>
+                                <path d="m19.4 15 .1.1 1.4 1.1-1.5 2.6-1.7-.6a8 8 0 0 1-1.7 1l-.3 1.8h-3l-.3-1.8a8 8 0 0 1-1.7-1l-1.7.6-1.5-2.6L7 15a8 8 0 0 1 0-2l-1.5-1.1L7 9.3l1.7.6a8 8 0 0 1 1.7-1l.3-1.8h3l.3 1.8a8 8 0 0 1 1.7 1l1.7-.6 1.5 2.6L19.4 13a8 8 0 0 1 0 2Z"/>
+                            </svg>
+
+                            <span>Settings</span>
+
+                        </a>
+
+                    </nav>
+
+                </div>
+
+            </div>
+
+
+            <!-- SIDEBAR BOTTOM -->
+
+            <div class="sidebar-bottom">
+
+
+                <!-- PLAN CARD -->
+
+                <div class="plan-card">
+
+                    <div class="plan-card-top">
+
+                        <span class="plan-icon">
+
+                            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="m12 3 2.5 5.5L20 11l-5.5 2.5L12 19l-2.5-5.5L4 11l5.5-2.5L12 3Z"/>
+                                <path d="m19 14 1.5 3.5L24 19l-3.5 1.5L19 24l-1.5-3.5L14 19l3.5-1.5L19 14Z" transform="translate(-1 -2) scale(.9)"/>
+                            </svg>
+
+                        </span>
+
+                        <span class="plan-badge">
+                            PRO
+                        </span>
+
+                    </div>
+
+                    <h3>Unlock your potential</h3>
+
+                    <p>
+                        Get deeper insights and take your workspace further.
+                    </p>
+
+                    <button
+                        class="plan-button"
+                        id="upgradeButton"
+                        type="button"
+                    >
+                        Explore Pro
+
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M5 12h14"/>
+                            <path d="m12 5 7 7-7 7"/>
+                        </svg>
+
+                    </button>
+
+                </div>
+
+
+                <!-- USER PROFILE -->
+
+                <button
+                    class="user-profile"
+                    id="profileButton"
+                    type="button"
+                >
+
+                    <span class="user-avatar">
+                        JD
+                        <span class="user-status"></span>
+                    </span>
+
+                    <span class="user-details">
+
+                        <span class="user-name">
+                            Jordan Davis
+                        </span>
+
+                        <span class="user-role">
+                            Workspace admin
+                        </span>
+
+                    </span>
+
+                    <svg class="icon profile-menu-icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="5" cy="12" r="1"/>
+                        <circle cx="12" cy="12" r="1"/>
+                        <circle cx="19" cy="12" r="1"/>
+                    </svg>
+
+                </button>
+
+            </div>
+
+        </aside>
+
+
+
+        <!-- =====================================
+             MAIN CONTENT
+        ====================================== -->
+
+        <main class="main-content" id="mainContent">
+
+
+            <!-- TOP HEADER -->
+
+            <header class="topbar">
+
+                <div class="topbar-left">
+
+                    <button
+                        class="icon-button mobile-menu-button"
+                        id="mobileMenuButton"
+                        type="button"
+                        aria-label="Toggle navigation"
+                    >
+
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M4 6h16"/>
+                            <path d="M4 12h16"/>
+                            <path d="M4 18h16"/>
+                        </svg>
+
+                    </button>
+
+                    <div class="breadcrumb">
+
+                        <span>Workspace</span>
+
+                        <svg class="icon breadcrumb-arrow" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="m9 18 6-6-6-6"/>
+                        </svg>
+
+                        <span class="breadcrumb-current" id="breadcrumbCurrent">
+                            Overview
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="topbar-right">
+
+
+                    <!-- GLOBAL SEARCH -->
+
+                    <button
+                        class="search-trigger"
+                        id="searchTrigger"
+                        type="button"
+                    >
+
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <circle cx="11" cy="11" r="7"/>
+                            <path d="m20 20-4-4"/>
+                        </svg>
+
+                        <span>Search anything...</span>
+
+                        <kbd>⌘ K</kbd>
+
+                    </button>
+
+
+                    <!-- LIVE INDICATOR -->
+
+                    <div class="live-status" title="Demo dashboard status">
+
+                        <span class="live-dot"></span>
+
+                        <span>Live</span>
+
+                    </div>
+
+
+                    <!-- THEME SWITCH -->
+
+                    <button
+                        class="icon-button"
+                        id="themeToggle"
+                        type="button"
+                        aria-label="Toggle color theme"
+                        title="Toggle theme"
+                    >
+
+                        <svg class="icon theme-sun-icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <circle cx="12" cy="12" r="4"/>
+                            <path d="M12 2v2"/>
+                            <path d="M12 20v2"/>
+                            <path d="m4.93 4.93 1.42 1.42"/>
+                            <path d="m17.65 17.65 1.42 1.42"/>
+                            <path d="M2 12h2"/>
+                            <path d="M20 12h2"/>
+                            <path d="m4.93 19.07 1.42-1.42"/>
+                            <path d="m17.65 6.35 1.42-1.42"/>
+                        </svg>
+
+                    </button>
+
+
+                    <!-- NOTIFICATIONS -->
+
+                    <button
+                        class="icon-button notification-button"
+                        id="notificationButton"
+                        type="button"
+                        aria-label="Notifications"
+                    >
+
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"/>
+                            <path d="M10 21h4"/>
+                        </svg>
+
+                        <span class="notification-indicator"></span>
+
+                    </button>
+
+
+                    <!-- AVATAR -->
+
+                    <button
+                        class="topbar-avatar"
+                        id="topbarAvatar"
+                        type="button"
+                        aria-label="Open user profile"
+                    >
+                        JD
+                    </button>
+
+                </div>
+
+            </header>
+
+
+
+            <!-- PAGE CONTENT -->
+
+            <div class="page-container" id="pageContainer">
+
+
+                <!-- =================================
+                     WELCOME SECTION
+                ================================== -->
+
+                <section class="welcome-section" id="overview">
+
+                    <div class="welcome-copy">
+
+                        <div class="eyebrow">
+
+                            <span class="eyebrow-line"></span>
+
+                            YOUR COMMAND CENTER
+
+                        </div>
+
+                        <h1>
+                            Good evening,
+                            <span class="gradient-text">Jordan.</span>
+                            <span class="greeting-sparkle">✦</span>
+                        </h1>
+
+                        <p class="welcome-description">
+                            Here's what's happening with your workspace today.
+                            Let's make it count.
+                        </p>
+
+                    </div>
+
+
+                    <div class="welcome-actions">
+
+                        <button
+                            class="secondary-button"
+                            id="exportButton"
+                            type="button"
+                        >
+
+                            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <path d="m7 10 5 5 5-5"/>
+                                <path d="M12 15V3"/>
+                            </svg>
+
+                            Existing
+
+                        </button>
+
+
+                        <button
+                            class="primary-button"
+                            id="newProjectButton"
+                            type="button"
+                        >
+
+                            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 5v14"/>
+                                <path d="M5 12h14"/>
+                            </svg>
+
+                            New store
+
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================
+                     QUICK INSIGHT BANNER
+                ================================== -->
+
+                <section class="insight-banner" id="insights">
+
+                    <div class="insight-decoration insight-decoration-one"></div>
+
+                    <div class="insight-decoration insight-decoration-two"></div>
+
+                    <div class="insight-icon-wrap">
+
+                        <svg viewBox="0 0 48 48" fill="none" aria-hidden="true">
+
+                            <path
+                                d="M24 5 29 18 43 23 29 28 24 42 19 28 5 23 19 18 24 5Z"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                                stroke-linejoin="round"
+                            />
+
+                            <path
+                                d="m37 4 1.5 4.5L43 10l-4.5 1.5L37 16l-1.5-4.5L31 10l4.5-1.5L37 4Z"
+                                fill="#B5A6FF"
+                            />
+
+                        </svg>
+
+                    </div>
+
+
+                    <div class="insight-content">
+
+                        <div class="insight-label">
+                            <span class="insight-pulse"></span>
+                            NEXODRA INTELLIGENCE
+                        </div>
+
+                        <h2>
+                            Your workspace is gaining momentum.
+                        </h2>
+
+                        <p>
+                            Your demo metrics show positive growth.
+                            Explore the analytics below to discover what's driving performance.
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        class="insight-action"
+                        id="exploreInsightsButton"
+                        type="button"
+                    >
+
+                        Explore insights
+
+                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M5 12h14"/>
+                            <path d="m12 5 7 7-7 7"/>
+                        </svg>
+
+                    </button>
+
+                </section>
+
+
+
+                <!-- =================================
+                     STATISTICS CARDS
+                ================================== -->
+
+                <section class="stats-section" aria-label="Key performance metrics">
+
+
+                    <div class="section-heading">
+
+                        <div>
+
+                            <h2>Performance overview</h2>
+
+                            <p>Your workspace at a glance</p>
+
+                        </div>
+
+
+                        <button
+                            class="period-selector"
+                            id="statsPeriod"
+                            type="button"
+                            data-period="7d"
+                        >
+
+                            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <rect x="3" y="5" width="18" height="16" rx="2"/>
+                                <path d="M16 3v4"/>
+                                <path d="M8 3v4"/>
+                                <path d="M3 11h18"/>
+                            </svg>
+
+                            Last 7 days
+
+                            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="m7 10 5 5 5-5"/>
+                            </svg>
+
+                        </button>
+
+                    </div>
+
+
+
+                    <div class="stats-grid">
+
+
+                        <!-- REVENUE -->
+
+                        <article class="stat-card" data-stat="revenue">
+
+                            <div class="stat-card-top">
+
+                                <span class="stat-label">
+                                    Total revenue
+                                </span>
+
+                                <span class="stat-icon stat-icon-purple">
+
+                                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                        <rect x="2" y="5" width="20" height="14" rx="3"/>
+                                        <circle cx="12" cy="12" r="3"/>
+                                        <path d="M6 9h.01"/>
+                                        <path d="M18 15h.01"/>
+                                    </svg>
+
+                                </span>
+
+                            </div>
+
+
+                            <div class="stat-value-row">
+
+                                <h3 class="stat-value" data-count="24850" data-prefix="$" data-format="currency">
+                                    $24,850
+                                </h3>
+
+                                <span class="stat-trend trend-up">
+
+                                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="m7 14 5-5 5 5"/>
+                                    </svg>
+
+                                    12.8%
+
+                                </span>
+
+                            </div>
+
+
+                            <p class="stat-comparison">
+                                <span class="comparison-muted">vs. previous period</span>
+                            </p>
+
+
+                            <div class="mini-chart mini-chart-purple">
+
+                                <canvas
+                                    class="sparkline"
+                                    id="revenueSparkline"
+                                    aria-label="Revenue trend chart"
+                                ></canvas>
+
+                            </div>
+
+                        </article>
+
+
+
+                        <!-- ACTIVE USERS -->
+
+                        <article class="stat-card" data-stat="users">
+
+                            <div class="stat-card-top">
+
+                                <span class="stat-label">
+                                    Active users
+                                </span>
+
+                                <span class="stat-icon stat-icon-cyan">
+
+                                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                        <circle cx="10" cy="7" r="4"/>
+                                        <path d="M20 21v-2a4 4 0 0 0-3-3.87"/>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                    </svg>
+
+                                </span>
+
+                            </div>
+
+
+                            <div class="stat-value-row">
+
+                                <h3 class="stat-value" data-count="8420" data-format="number">
+                                    8,420
+                                </h3>
+
+                                <span class="stat-trend trend-up">
+
+                                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="m7 14 5-5 5 5"/>
+                                    </svg>
+
+                                    8.2%
+
+                                </span>
+
+                            </div>
+
+
+                            <p class="stat-comparison">
+                                <span class="comparison-muted">vs. previous period</span>
+                            </p>
+
+
+                            <div class="mini-chart mini-chart-cyan">
+
+                                <canvas
+                                    class="sparkline"
+                                    id="usersSparkline"
+                                    aria-label="Active users trend chart"
+                                ></canvas>
+
+                            </div>
+
+                        </article>
+
+
+
+                        <!-- CONVERSION RATE -->
+
+                        <article class="stat-card" data-stat="conversion">
+
+                            <div class="stat-card-top">
+
+                                <span class="stat-label">
+                                    Conversion rate
+                                </span>
+
+                                <span class="stat-icon stat-icon-green">
+
+                                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M3 17 9 11l4 4 8-8"/>
+                                        <path d="M15 7h6v6"/>
+                                    </svg>
+
+                                </span>
+
+                            </div>
+
+
+                            <div class="stat-value-row">
+
+                                <h3 class="stat-value" data-count="3.62" data-suffix="%" data-decimals="2">
+                                    3.62%
+                                </h3>
+
+                                <span class="stat-trend trend-up">
+
+                                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="m7 14 5-5 5 5"/>
+                                    </svg>
+
+                                    4.6%
+
+                                </span>
+
+                            </div>
+
+
+                            <p class="stat-comparison">
+                                <span class="comparison-muted">vs. previous period</span>
+                            </p>
+
+
+                            <div class="mini-chart mini-chart-green">
+
+                                <canvas
+                                    class="sparkline"
+                                    id="conversionSparkline"
+                                    aria-label="Conversion rate trend chart"
+                                ></canvas>
+
+                            </div>
+
+                        </article>
+
+
+
+                        <!-- ENGAGEMENT -->
+
+                        <article class="stat-card" data-stat="engagement">
+
+                            <div class="stat-card-top">
+
+                                <span class="stat-label">
+                                    Engagement
+                                </span>
+
+                                <span class="stat-icon stat-icon-orange">
+
+                                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M12 21s-8-4.5-8-11a4.5 4.5 0 0 1 8-2.9A4.5 4.5 0 0 1 20 10c0 6.5-8 11-8 11Z"/>
+                                    </svg>
+
+                                </span>
+
+                            </div>
+
+
+                            <div class="stat-value-row">
+
+                                <h3 class="stat-value" data-count="68.4" data-suffix="%" data-decimals="1">
+                                    68.4%
+                                </h3>
+
+                                <span class="stat-trend trend-down">
+
+                                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="m7 10 5 5 5-5"/>
+                                    </svg>
+
+                                    1.2%
+
+                                </span>
+
+                            </div>
+
+
+                            <p class="stat-comparison">
+                                <span class="comparison-muted">vs. previous period</span>
+                            </p>
+
+
+                            <div class="mini-chart mini-chart-orange">
+
+                                <canvas
+                                    class="sparkline"
+                                    id="engagementSparkline"
+                                    aria-label="Engagement trend chart"
+                                ></canvas>
+
+                            </div>
+
+                        </article>
+
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- =================================
+                     ANALYTICS GRID
+                ================================== -->
+
+                <section class="analytics-section" id="analytics">
+
+
+                    <div class="analytics-grid">
+
+
+                        <!-- MAIN ANALYTICS CHART -->
+
+                        <article class="panel revenue-panel">
+
+
+                            <div class="panel-header">
+
+                                <div>
+
+                                    <div class="panel-title-row">
+
+                                        <h2>Revenue analytics</h2>
+
+                                        <span class="chart-live-badge">
+                                            <span></span>
+                                            Updated
+                                        </span>
+
+                                    </div>
+
+                                    <p class="panel-description">
+                                        Track your financial performance over time.
+                                    </p>
+
+                                </div>
+
+
+                                <button
+                                    class="icon-button panel-menu-button"
+                                    data-menu="revenue"
+                                    type="button"
+                                    aria-label="Revenue chart options"
+                                >
+
+                                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                        <circle cx="5" cy="12" r="1"/>
+                                        <circle cx="12" cy="12" r="1"/>
+                                        <circle cx="19" cy="12" r="1"/>
+                                    </svg>
+
+                                </button>
+
+                            </div>
+
+
+
+                            <div class="revenue-summary">
+
+                                <div class="revenue-summary-main">
+
+                                    <span class="summary-overline">
+                                        TOTAL REVENUE
+                                    </span>
+
+                                    <div class="revenue-number">
+                                        <span>$</span>24,850<span class="revenue-decimal">.00</span>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="revenue-summary-change">
+
+                                    <span class="change-pill">
+
+                                        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                            <path d="m7 14 5-5 5 5"/>
+                                        </svg>
+
+                                        12.8%
+
+                                    </span>
+
+                                    <span class="change-caption">
+                                        growth
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="chart-legend">
+
+                                <span class="legend-item">
+
+                                    <span class="legend-dot legend-dot-purple"></span>
+
+                                    Revenue
+
+                                </span>
+
+                                <span class="legend-item">
+
+                                    <span class="legend-dot legend-dot-cyan"></span>
+
+                                    Previous period
+
+                                </span>
+
+
+                                <div class="chart-period-controls" role="group" aria-label="Chart time range">
+
+                                    <button
+                                        class="chart-period-button"
+                                        data-range="7d"
+                                        type="button"
+                                    >
+                                        7D
+                                    </button>
+
+                                    <button
+                                        class="chart-period-button active"
+                                        data-range="30d"
+                                        type="button"
+                                    >
+                                        30D
+                                    </button>
+
+                                    <button
+                                        class="chart-period-button"
+                                        data-range="90d"
+                                        type="button"
+                                    >
+                                        90D
+                                    </button>
+
+                                    <button
+                                        class="chart-period-button"
+                                        data-range="1y"
+                                        type="button"
+                                    >
+                                        1Y
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="main-chart-container">
+
+                                <div class="chart-y-axis" aria-hidden="true">
+
+                                    <span>$30k</span>
+
+                                    <span>$20k</span>
+
+                                    <span>$10k</span>
+
+                                    <span>$0</span>
+
+                                </div>
+
+
+                                <div class="main-chart-plot">
+
+                                    <div class="chart-grid-lines" aria-hidden="true">
+
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+
+                                    </div>
+
+
+                                    <canvas
+                                        id="revenueChart"
+                                        class="main-chart-canvas"
+                                        role="img"
+                                        aria-label="Revenue analytics chart showing revenue and previous period"
+                                    ></canvas>
+
+
+                                    <div
+                                        class="chart-tooltip"
+                                        id="chartTooltip"
+                                        aria-hidden="true"
+                                    >
+
+                                        <span class="tooltip-date">
+                                            Oct 12
+                                        </span>
+
+                                        <strong class="tooltip-value">
+                                            $24,850
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="chart-x-axis" id="chartXAxis" aria-hidden="true">
+
+                                <span>Oct 01</span>
+                                <span>Oct 05</span>
+                                <span>Oct 10</span>
+                                <span>Oct 15</span>
+                                <span>Oct 20</span>
+                                <span>Oct 25</span>
+                                <span>Oct 30</span>
+
+                            </div>
+
+
+                        </article>
+
+
+
+                        <!-- TRAFFIC SOURCES -->
+
+                        <article class="panel traffic-panel" id="audience">
+
+
+                            <div class="panel-header">
+
+                                <div>
+
+                                    <h2>Traffic sources</h2>
+
+                                    <p class="panel-description">
+                                        Where your visitors come from.
+                                    </p>
+
+                                </div>
+
+
+                                <button
+                                    class="icon-button panel-menu-button"
+                                    data-menu="traffic"
+                                    type="button"
+                                    aria-label="Traffic source options"
+                                >
+
+                                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                        <circle cx="5" cy="12" r="1"/>
+                                        <circle cx="12" cy="12" r="1"/>
+                                        <circle cx="19" cy="12" r="1"/>
+                                    </svg>
+
+                                </button>
+
+                            </div>
+
+
+
+                            <div class="traffic-total">
+
+                                <div>
+
+                                    <span class="summary-overline">
+                                        TOTAL VISITORS
+                                    </span>
+
+                                    <h3>18,462</h3>
+
+                                </div>
+
+
+                                <span class="stat-trend trend-up">
+
+                                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="m7 14 5-5 5 5"/>
+                                    </svg>
+
+                                    9.4%
+
+                                </span>
+
+                            </div>
+
+
+
+                            <div class="donut-chart-container">
+
+                                <div
+                                    class="donut-chart"
+                                    id="trafficDonut"
+                                    role="img"
+                                    aria-label="Traffic sources distribution chart"
+                                >
+
+                                    <div class="donut-center">
+
+                                        <span class="donut-center-label">
+                                            TOTAL
+                                        </span>
+
+                                        <strong>18.4k</strong>
+
+                                        <span class="donut-center-caption">
+                                            visitors
+                                        </span>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="traffic-legend">
+
+
+                                <div class="traffic-source-row">
+
+                                    <span class="traffic-source-name">
+
+                                        <span class="source-dot source-purple"></span>
+
+                                        Organic search
+
+                                    </span>
+
+                                    <div class="traffic-source-data">
+
+                                        <strong>42%</strong>
+
+                                        <span>7,754</span>
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <div class="traffic-source-row">
+
+                                    <span class="traffic-source-name">
+
+                                        <span class="source-dot source-cyan"></span>
+
+                                        Direct
+
+                                    </span>
+
+                                    <div class="traffic-source-data">
+
+                                        <strong>28%</strong>
+
+                                        <span>5,169</span>
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <div class="traffic-source-row">
+
+                                    <span class="traffic-source-name">
+
+                                        <span class="source-dot source-pink"></span>
+
+                                        Social media
+
+                                    </span>
+
+                                    <div class="traffic-source-data">
+
+                                        <strong>18%</strong>
+
+                                        <span>3,323</span>
+
+                                    </div>
+
+                                </div>
+
+
+
+                                <div class="traffic-source-row">
+
+                                    <span class="traffic-source-name">
+
+                                        <span class="source-dot source-orange"></span>
+
+                                        Referrals
+
+                                    </span>
+
+                                    <div class="traffic-source-data">
+
+                                        <strong>12%</strong>
+
+                                        <span>2,216</span>
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+
+                            <button
+                                class="text-action"
+                                id="trafficDetailsButton"
+                                type="button"
+                            >
+
+                                View traffic details
+
+                                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M5 12h14"/>
+                                    <path d="m12 5 7 7-7 7"/>
+                                </svg>
+
+                            </button>
+
+
+                        </article>
+
+
+                    </div>
+
+
+                </section>
+
+
+
+                <!-- =================================
+                     LOWER DASHBOARD GRID
+                ================================== -->
+
+                <section class="lower-dashboard-grid">
+
+
+                    <!-- PROJECTS -->
+
+                    <article class="panel projects-panel" id="projects">
+
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <h2>Active stores</h2>
+
+                                <p class="panel-description">
+                                    Keep track of what you're building.
+                                </p>
+
+                            </div>
+
+
+                            <button
+                                class="text-action compact-action"
+                                id="viewAllProjects"
+                                type="button"
+                            >
+
+                                View all
+
+                                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M5 12h14"/>
+                                    <path d="m12 5 7 7-7 7"/>
+                                </svg>
+
+                            </button>
+
+                        </div>
+
+
+
+                        <div class="projects-table-wrapper">
+
+                            <table class="projects-table">
+
+                                <thead>
+
+                                    <tr>
+
+                                        <th scope="col">PROJECT</th>
+
+                                        <th scope="col">STATUS</th>
+
+                                        <th scope="col">PROGRESS</th>
+
+                                        <th scope="col">DUE DATE</th>
+
+                                    </tr>
+
+                                </thead>
+
+
+                                <tbody id="projectsTableBody">
+
+
+                                    <tr class="project-row">
+
+                                        <td>
+
+                                            <div class="project-name-cell">
+
+                                                <span class="project-logo project-logo-purple">
+                                                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                                        <path d="m12 3 9 5-9 5-9-5 9-5Z"/>
+                                                        <path d="m3 12 9 5 9-5"/>
+                                                        <path d="m3 16 9 5 9-5"/>
+                                                    </svg>
+                                                </span>
+
+                                                <span class="project-text">
+
+                                                    <strong>Website redesign</strong>
+
+                                                    <small>Design & development</small>
+
+                                                </span>
+
+                                            </div>
+
+                                        </td>
+
+
+                                        <td>
+
+                                            <span class="project-status status-progress">
+                                                <span></span>
+                                                In progress
+                                            </span>
+
+                                        </td>
+
+
+                                        <td>
+
+                                            <div class="project-progress-cell">
+
+                                                <div class="progress-track">
+
+                                                    <span
+                                                        class="progress-fill progress-purple"
+                                                        style="--progress: 78%;"
+                                                    ></span>
+
+                                                </div>
+
+                                                <span class="progress-percentage">
+                                                    78%
+                                                </span>
+
+                                            </div>
+
+                                        </td>
+
+
+                                        <td class="project-due-date">
+                                            Oct 24, 2026
+                                        </td>
+
+                                    </tr>
+
+
+
+                                    <tr class="project-row">
+
+                                        <td>
+
+                                            <div class="project-name-cell">
+
+                                                <span class="project-logo project-logo-cyan">
+
+                                                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                                        <rect x="3" y="3" width="18" height="18" rx="4"/>
+                                                        <path d="M8 12h8"/>
+                                                        <path d="M12 8v8"/>
+                                                    </svg>
+
+                                                </span>
+
+                                                <span class="project-text">
+
+                                                    <strong>Mobile application</strong>
+
+                                                    <small>Product & engineering</small>
+
+                                                </span>
+
+                                            </div>
+
+                                        </td>
+
+
+                                        <td>
+
+                                            <span class="project-status status-review">
+                                                <span></span>
+                                                In review
+                                            </span>
+
+                                        </td>
+
+
+                                        <td>
+
+                                            <div class="project-progress-cell">
+
+                                                <div class="progress-track">
+
+                                                    <span
+                                                        class="progress-fill progress-cyan"
+                                                        style="--progress: 56%;"
+                                                    ></span>
+
+                                                </div>
+
+                                                <span class="progress-percentage">
+                                                    56%
+                                                </span>
+
+                                            </div>
+
+                                        </td>
+
+
+                                        <td class="project-due-date">
+                                            Oct 27, 2026
+                                        </td>
+
+                                    </tr>
+
+
+
+                                    <tr class="project-row">
+
+                                        <td>
+
+                                            <div class="project-name-cell">
+
+                                                <span class="project-logo project-logo-orange">
+
+                                                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                                        <path d="M12 3v18"/>
+                                                        <path d="M3 12h18"/>
+                                                        <circle cx="12" cy="12" r="9"/>
+                                                    </svg>
+
+                                                </span>
+
+                                                <span class="project-text">
+
+                                                    <strong>Brand identity</strong>
+
+                                                    <small>Creative & marketing</small>
+
+                                                </span>
+
+                                            </div>
+
+                                        </td>
+
+
+                                        <td>
+
+                                            <span class="project-status status-completed">
+                                                <span></span>
+                                                Completed
+                                            </span>
+
+                                        </td>
+
+
+                                        <td>
+
+                                            <div class="project-progress-cell">
+
+                                                <div class="progress-track">
+
+                                                    <span
+                                                        class="progress-fill progress-green"
+                                                        style="--progress: 100%;"
+                                                    ></span>
+
+                                                </div>
+
+                                                <span class="progress-percentage">
+                                                    100%
+                                                </span>
+
+                                            </div>
+
+                                        </td>
+
+
+                                        <td class="project-due-date">
+                                            Oct 18, 2026
+                                        </td>
+
+                                    </tr>
+
+
+
+                                    <tr class="project-row">
+
+                                        <td>
+
+                                            <div class="project-name-cell">
+
+                                                <span class="project-logo project-logo-pink">
+
+                                                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                                        <path d="M4 19V5"/>
+                                                        <path d="M4 19h16"/>
+                                                        <path d="m7 15 4-5 3 3 5-7"/>
+                                                    </svg>
+
+                                                </span>
+
+                                                <span class="project-text">
+
+                                                    <strong>Growth campaign</strong>
+
+                                                    <small>Analytics & marketing</small>
+
+                                                </span>
+
+                                            </div>
+
+                                        </td>
+
+
+                                        <td>
+
+                                            <span class="project-status status-progress">
+                                                <span></span>
+                                                In progress
+                                            </span>
+
+                                        </td>
+
+
+                                        <td>
+
+                                            <div class="project-progress-cell">
+
+                                                <div class="progress-track">
+
+                                                    <span
+                                                        class="progress-fill progress-pink"
+                                                        style="--progress: 34%;"
+                                                    ></span>
+
+                                                </div>
+
+                                                <span class="progress-percentage">
+                                                    34%
+                                                </span>
+
+                                            </div>
+
+                                        </td>
+
+
+                                        <td class="project-due-date">
+                                            Nov 02, 2026
+                                        </td>
+
+                                    </tr>
+
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+
+                    </article>
+
+
+
+                    <!-- RECENT ACTIVITY -->
+
+                    <article class="panel activity-panel" id="reports">
+
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <h2>Recent activity</h2>
+
+                                <p class="panel-description">
+                                    The latest workspace updates.
+                                </p>
+
+                            </div>
+
+
+                            <button
+                                class="icon-button panel-menu-button"
+                                data-menu="activity"
+                                type="button"
+                                aria-label="Activity options"
+                            >
+
+                                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                    <circle cx="5" cy="12" r="1"/>
+                                    <circle cx="12" cy="12" r="1"/>
+                                    <circle cx="19" cy="12" r="1"/>
+                                </svg>
+
+                            </button>
+
+                        </div>
+
+
+
+                        <div class="activity-list" id="activityList">
+
+
+                            <div class="activity-item">
+
+                                <span class="activity-icon activity-icon-purple">
+
+                                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M12 20h9"/>
+                                        <path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L8 18l-4 1 1-4Z"/>
+                                    </svg>
+
+                                </span>
+
+
+                                <div class="activity-content">
+
+                                    <p>
+                                        <strong>Sarah Chen</strong>
+                                        updated Website redesign.
+                                    </p>
+
+                                    <span class="activity-time">
+                                        12 minutes ago
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="activity-item">
+
+                                <span class="activity-icon activity-icon-cyan">
+
+                                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M12 5v14"/>
+                                        <path d="M5 12h14"/>
+                                    </svg>
+
+                                </span>
+
+
+                                <div class="activity-content">
+
+                                    <p>
+                                        <strong>Alex Morgan</strong>
+                                        created a new task.
+                                    </p>
+
+                                    <span class="activity-time">
+                                        38 minutes ago
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="activity-item">
+
+                                <span class="activity-icon activity-icon-green">
+
+                                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="m5 12 4 4L19 6"/>
+                                    </svg>
+
+                                </span>
+
+
+                                <div class="activity-content">
+
+                                    <p>
+                                        <strong>You</strong>
+                                        completed Brand identity.
+                                    </p>
+
+                                    <span class="activity-time">
+                                        1 hour ago
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="activity-item">
+
+                                <span class="activity-icon activity-icon-orange">
+
+                                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                        <circle cx="12" cy="12" r="9"/>
+                                        <path d="M12 7v5l3 2"/>
+                                    </svg>
+
+                                </span>
+
+
+                                <div class="activity-content">
+
+                                    <p>
+                                        <strong>System</strong>
+                                        generated your weekly report.
+                                    </p>
+
+                                    <span class="activity-time">
+                                        3 hours ago
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <button
+                            class="text-action activity-view-all"
+                            id="viewAllActivity"
+                            type="button"
+                        >
+
+                            View activity log
+
+                            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M5 12h14"/>
+                                <path d="m12 5 7 7-7 7"/>
+                            </svg>
+
+                        </button>
+
+
+                    </article>
+
+
+                </section>
+
+
+
+                <!-- =================================
+                     BOTTOM INSIGHTS SECTION
+                ================================== -->
+
+                <section class="bottom-insights-grid" id="integrations">
+
+
+                    <!-- WEEKLY GOAL -->
+
+                    <article class="panel goal-panel">
+
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <h2>Weekly goal</h2>
+
+                                <p class="panel-description">
+                                    Progress toward your workspace target.
+                                </p>
+
+                            </div>
+
+
+                            <span class="goal-badge">
+                                WEEK 42
+                            </span>
+
+                        </div>
+
+
+
+                        <div class="goal-content">
+
+                            <div class="goal-ring-wrap">
+
+                                <svg
+                                    class="goal-ring"
+                                    viewBox="0 0 120 120"
+                                    role="img"
+                                    aria-label="Weekly goal progress: 76 percent"
+                                >
+
+                                    <circle
+                                        class="goal-ring-track"
+                                        cx="60"
+                                        cy="60"
+                                        r="48"
+                                    />
+
+                                    <circle
+                                        class="goal-ring-progress"
+                                        id="goalRingProgress"
+                                        cx="60"
+                                        cy="60"
+                                        r="48"
+                                    />
+
+                                </svg>
+
+
+                                <div class="goal-ring-center">
+
+                                    <strong>76<span>%</span></strong>
+
+                                    <span>Completed</span>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="goal-details">
+
+                                <h3>You're on your way!</h3>
+
+                                <p>
+                                    Keep your momentum going. You're making great progress toward this week's target.
+                                </p>
+
+
+                                <div class="goal-metrics">
+
+                                    <div>
+
+                                        <span class="goal-metric-dot"></span>
+
+                                        <span>Completed</span>
+
+                                        <strong>38</strong>
+
+                                    </div>
+
+
+                                    <div>
+
+                                        <span class="goal-metric-dot goal-metric-muted"></span>
+
+                                        <span>Remaining</span>
+
+                                        <strong>12</strong>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </article>
+
+
+
+                    <!-- QUICK ACTIONS -->
+
+                    <article class="panel quick-actions-panel">
+
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <h2>Quick actions</h2>
+
+                                <p class="panel-description">
+                                    Get things done faster.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="quick-actions-grid">
+
+
+                            <button
+                                class="quick-action"
+                                data-action="project"
+                                type="button"
+                            >
+
+                                <span class="quick-action-icon quick-purple">
+
+                                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M12 5v14"/>
+                                        <path d="M5 12h14"/>
+                                    </svg>
+
+                                </span>
+
+                                <span>
+
+                                    <strong>New project</strong>
+
+                                    <small>Start something new</small>
+
+                                </span>
+
+                                <svg class="icon quick-action-arrow" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="m9 18 6-6-6-6"/>
+                                </svg>
+
+                            </button>
+
+
+
+                            <button
+                                class="quick-action"
+                                data-action="report"
+                                type="button"
+                            >
+
+                                <span class="quick-action-icon quick-cyan">
+
+                                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                        <path d="M14 2v6h6"/>
+                                        <path d="M8 13h8"/>
+                                        <path d="M8 17h5"/>
+                                    </svg>
+
+                                </span>
+
+                                <span>
+
+                                    <strong>Generate report</strong>
+
+                                    <small>Explore your data</small>
+
+                                </span>
+
+                                <svg class="icon quick-action-arrow" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="m9 18 6-6-6-6"/>
+                                </svg>
+
+                            </button>
+
+
+
+                            <button
+                                class="quick-action"
+                                data-action="invite"
+                                type="button"
+                            >
+
+                                <span class="quick-action-icon quick-pink">
+
+                                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                        <circle cx="10" cy="7" r="4"/>
+                                        <path d="M19 8v6"/>
+                                        <path d="M22 11h-6"/>
+                                    </svg>
+
+                                </span>
+
+                                <span>
+
+                                    <strong>Invite teammate</strong>
+
+                                    <small>Grow your team</small>
+
+                                </span>
+
+                                <svg class="icon quick-action-arrow" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="m9 18 6-6-6-6"/>
+                                </svg>
+
+                            </button>
+
+
+
+                            <button
+                                class="quick-action"
+                                data-action="insights"
+                                type="button"
+                            >
+
+                                <span class="quick-action-icon quick-orange">
+
+                                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                        <path d="M12 3v2"/>
+                                        <path d="M12 19v2"/>
+                                        <path d="m4.93 4.93 1.42 1.42"/>
+                                        <path d="m17.65 17.65 1.42 1.42"/>
+                                        <circle cx="12" cy="12" r="5"/>
+                                    </svg>
+
+                                </span>
+
+                                <span>
+
+                                    <strong>AI insights</strong>
+
+                                    <small>Discover opportunities</small>
+
+                                </span>
+
+                                <svg class="icon quick-action-arrow" viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="m9 18 6-6-6-6"/>
+                                </svg>
+
+                            </button>
+
+
+                        </div>
+
+
+                    </article>
+
+
+                </section>
+
+
+
+                <!-- =================================
+                     FOOTER
+                ================================== -->
+
+                <footer class="app-footer">
+
+
+                    <div class="footer-left">
+
+                        <span class="footer-brand">
+                            NEXODRA<span>.</span>
+                        </span>
+
+                        <span class="footer-divider"></span>
+
+                        <span>
+                            Intelligence, beautifully organized.
+                        </span>
+
+                    </div>
+
+
+                    <div class="footer-right">
+
+                        <span class="footer-system-status">
+
+                            <span></span>
+
+                            All systems operational
+
+                        </span>
+
+                        <span class="footer-copyright">
+                            © 2026 Nexodra Studio
+                        </span>
+
+                    </div>
+
+
+                </footer>
+
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+
+    <!-- =========================================
+         GLOBAL SEARCH MODAL
+    ========================================== -->
+
+    <div
+        class="modal-overlay"
+        id="searchModal"
+        aria-hidden="true"
+    >
+
+        <div
+            class="search-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="searchModalTitle"
+        >
+
+            <div class="search-modal-input-wrap">
+
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="11" cy="11" r="7"/>
+                    <path d="m20 20-4-4"/>
+                </svg>
+
+                <input
+                    type="text"
+                    id="globalSearchInput"
+                    placeholder="Search projects, analytics, settings..."
+                    autocomplete="off"
+                    aria-label="Search workspace"
+                >
+
+                <button
+                    class="search-close-key"
+                    id="searchCloseButton"
+                    type="button"
+                    aria-label="Close search"
+                >
+                    ESC
+                </button>
+
+            </div>
+
+
+            <div class="search-modal-body">
+
+                <p class="search-modal-label" id="searchModalTitle">
+                    QUICK NAVIGATION
+                </p>
+
+
+                <div class="search-results" id="searchResults">
+
+
+                    <button class="search-result" data-search-page="overview" type="button">
+
+                        <span class="search-result-icon">
+
+                            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <rect x="3" y="3" width="7" height="9" rx="2"/>
+                                <rect x="14" y="3" width="7" height="5" rx="2"/>
+                                <rect x="14" y="12" width="7" height="9" rx="2"/>
+                                <rect x="3" y="16" width="7" height="5" rx="2"/>
+                            </svg>
+
+                        </span>
+
+                        <span class="search-result-text">
+
+                            <strong>Overview</strong>
+
+                            <small>Dashboard and key metrics</small>
+
+                        </span>
+
+                        <kbd>↵</kbd>
+
+                    </button>
+
+
+
+                    <button class="search-result" data-search-page="analytics" type="button">
+
+                        <span class="search-result-icon">
+
+                            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M3 3v18h18"/>
+                                <path d="m19 9-5 5-4-4-5 5"/>
+                            </svg>
+
+                        </span>
+
+                        <span class="search-result-text">
+
+                            <strong>Analytics</strong>
+
+                            <small>Charts and performance</small>
+
+                        </span>
+
+                        <kbd>↵</kbd>
+
+                    </button>
+
+
+
+                    <button class="search-result" data-search-page="projects" type="button">
+
+                        <span class="search-result-icon">
+
+                            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <rect x="3" y="4" width="18" height="16" rx="3"/>
+                                <path d="M3 9h18"/>
+                            </svg>
+
+                        </span>
+
+                        <span class="search-result-text">
+
+                            <strong>Stores</strong>
+
+                            <small>Manage your active stores</small>
+
+                        </span>
+
+                        <kbd>↵</kbd>
+
+                    </button>
+
+
+
+                    <button class="search-result" data-search-page="reports" type="button">
+
+                        <span class="search-result-icon">
+
+                            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            </svg>
+
+                        </span>
+
+                        <span class="search-result-text">
+
+                            <strong>Reports</strong>
+
+                            <small>Review workspace reports</small>
+
+                        </span>
+
+                        <kbd>↵</kbd>
+
+                    </button>
+
+
+                </div>
+
+
+                <div class="search-modal-footer">
+
+                    <span>
+                        <kbd>↑</kbd>
+                        <kbd>↓</kbd>
+                        to navigate
+                    </span>
+
+                    <span>
+                        <kbd>ESC</kbd>
+                        to close
+                    </span>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================================
+         GENERIC MODAL
+    ========================================== -->
+
+    <div
+        class="modal-overlay"
+        id="actionModal"
+        aria-hidden="true"
+    >
+
+        <div
+            class="action-modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="actionModalTitle"
+        >
+
+            <div class="action-modal-header">
+
+                <span class="action-modal-icon" id="actionModalIcon">
+
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 5v14"/>
+                        <path d="M5 12h14"/>
+                    </svg>
+
+                </span>
+
+
+                <button
+                    class="icon-button modal-close-button"
+                    id="actionModalClose"
+                    type="button"
+                    aria-label="Close dialog"
+                >
+
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="m18 6-12 12"/>
+                        <path d="m6 6 12 12"/>
+                    </svg>
+
+                </button>
+
+            </div>
+
+
+            <div class="action-modal-content">
+
+                <h2 id="actionModalTitle">
+                    Create something new
+                </h2>
+
+                <p id="actionModalDescription">
+                    Bring your next big idea to life.
+                </p>
+
+            </div>
+
+
+            <form id="actionModalForm">
+
+                <div class="form-field" id="actionFormField">
+
+                    <label for="actionInput" id="actionInputLabel">
+                        Project name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="actionInput"
+                        name="actionInput"
+                        placeholder="Enter a name..."
+                        maxlength="80"
+                    >
+
+                </div>
+
+
+                <div class="modal-form-actions">
+
+                    <button
+                        class="secondary-button"
+                        id="actionModalCancel"
+                        type="button"
+                    >
+                        Cancel
+                    </button>
+
+                    <button
+                        class="primary-button"
+                        id="actionModalSubmit"
+                        type="submit"
+                    >
+                        Continue
+                    </button>
+
+                </div>
+
+            </form>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================================
+         NOTIFICATION POPOVER
+    ========================================== -->
+
+    <div
+        class="notification-popover"
+        id="notificationPopover"
+        aria-hidden="true"
+    >
+
+        <div class="notification-popover-header">
+
+            <div>
+
+                <h3>Notifications</h3>
+
+                <p>You're all caught up on your demo activity.</p>
+
+            </div>
+
+
+            <button
+                class="icon-button"
+                id="closeNotifications"
+                type="button"
+                aria-label="Close notifications"
+            >
+
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="m18 6-12 12"/>
+                    <path d="m6 6 12 12"/>
+                </svg>
+
+            </button>
+
+        </div>
+
+
+        <div class="notification-empty-state">
+
+            <span class="notification-empty-icon">
+
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"/>
+                    <path d="M10 21h4"/>
+                </svg>
+
+            </span>
+
+            <strong>You're all caught up</strong>
+
+            <p>New activity will appear here.</p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================================
+         TOAST NOTIFICATIONS
+    ========================================== -->
+
+    <div
+        class="toast-container"
+        id="toastContainer"
+        aria-live="polite"
+        aria-atomic="false"
+    ></div>
+
+
+
+    <!-- =========================================
+         MOBILE SIDEBAR BACKDROP
+    ========================================== -->
+
+    <div
+        class="sidebar-backdrop"
+        id="sidebarBackdrop"
+        aria-hidden="true"
+    ></div>
+
+
+
+    <!-- =========================================
+         APPLICATION JAVASCRIPT
+    ========================================== -->
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
